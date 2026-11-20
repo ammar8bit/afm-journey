@@ -35,16 +35,16 @@ window.AFM_DATA = {
    "phase": "1 Foundations",
    "hours": 3,
    "focus": "FX hedging",
-   "tasks": "Finish the Gogarth video, then attempt it yourself (45 min) + mark. Read Technical Summary P2.7 (hedging set-up table) and the Jun 2021 examiner report on Q3.",
-   "status": null,
-   "actualHours": null
+   "tasks": "Watched the 2023 webinar with the Gogarth solution and a lock-in rate lecture (about 4 hours), then attempted Gogarth after reading the model answer: 21.5/25 (seen). Calculations not yet secure without help, so day 3 starts with a blank-sheet redo.",
+   "status": "Done",
+   "actualHours": 5
   },
   {
    "day": 3,
    "phase": "1 Foundations",
    "hours": 3,
    "focus": "FX hedging + unseen M&A",
-   "tasks": "Attempt Passmore unseen (45 min) + mark. Check your set-up line by line: buy/sell, number of contracts, month, option type. Then attempt Garnod unseen and timed (45 min) + mark: your first true M&A baseline.",
+   "tasks": "Hedging day. First redo Gogarth (a) on a blank sheet with no notes (25 min): set-up line, lock-in rate by the basis method, contracts, over/under-hedge, options premium. Then attempt Passmore unseen (45 min) + mark: check buy/sell, number of contracts, month, option type line by line. Then Garnod unseen and timed (45 min) + mark: your first true M&A baseline.",
    "status": null,
    "actualHours": null
   },
@@ -289,8 +289,15 @@ window.AFM_DATA = {
     "xlsx": "https://drive.google.com/file/d/1Zc37UaWOeXjzD3da5RssywVEMMhzwVpa/view",
     "folder": "https://drive.google.com/drive/folders/15A7osKshiU00klc3pJXOhn8z6rC1OBvX"
    },
-   "video": false,
-   "attempts": []
+   "video": true,
+   "attempts": [
+    {
+     "date": "2026-11-20",
+     "marks": 21.5,
+     "by": "Claude",
+     "notes": "Seen attempt: after the 2023 webinar, a lock-in rate lecture and reading the model answer. (a) 14/15, (b) 4.5/5, (c) 3/5. Calculations match the ACCA answer; lost marks on the set-up line, options discussion, option styles and the economic risk definition."
+    }
+   ]
   },
   {
    "id": "Q04",
@@ -1520,6 +1527,14 @@ window.AFM_DATA = {
    "analysis": 2,
    "scepticism": 3,
    "commercial": 2
+  },
+  {
+   "date": "2026-11-20",
+   "source": "Gogarth Co",
+   "communication": null,
+   "analysis": 2,
+   "scepticism": 2,
+   "commercial": 1
   }
  ],
  "errors": [
@@ -1546,6 +1561,38 @@ window.AFM_DATA = {
    "mistake": "Said the DIRECTORS can diversify more cheaply; it is the SHAREHOLDERS who can diversify their own portfolios more easily than the company can",
    "rule": "Name the right party: shareholders' portfolio diversification vs company diversification",
    "lost": 0.5
+  },
+  {
+   "date": "2026-11-20",
+   "question": "Gogarth Co",
+   "topic": "FX hedging",
+   "mistake": "Did not write the hedge set-up line (Buy 193 MR September futures at $0.2378; buy September MR call options at $0.2368)",
+   "rule": "Start every derivative hedge with one line: buy/sell, which contract month, how many, at what price",
+   "lost": 0.5
+  },
+  {
+   "date": "2026-11-20",
+   "question": "Gogarth Co",
+   "topic": "FX hedging",
+   "mistake": "Advice after the calculations skipped why options might still be chosen (upside if the US$ strengthens, or if a transaction falls through) and the futures margin requirement",
+   "rule": "After the numbers, give one risk per method (forward: default/no upside; futures: basis risk, margin; options: premium but keeps the upside), then recommend",
+   "lost": 1
+  },
+  {
+   "date": "2026-11-20",
+   "question": "Gogarth Co",
+   "topic": "FX hedging",
+   "mistake": "Said exchange-traded options cannot be exercised early while OTC can; it is the other way round (exchange-traded are usually American, OTC usually European)",
+   "rule": "Exchange-traded options: standard sizes and dates, tradeable, American style. OTC: tailored, more currencies and longer terms, usually European",
+   "lost": 0.5
+  },
+  {
+   "date": "2026-11-20",
+   "question": "Gogarth Co",
+   "topic": "FX hedging",
+   "mistake": "Defined economic risk as long-term transaction risk caused by recession and drifted into financial-statement effects (translation risk); missed diversifying customers, suppliers and operations and the home-market competitor effect",
+   "rule": "Economic risk = exchange rate movements changing the present value of future cash flows and competitiveness. Treasury role: identify affected cash flows, assess long-term rate drivers, match foreign assets with foreign loans, advise on diversification and pricing",
+   "lost": 2
   }
  ],
  "journal": []
