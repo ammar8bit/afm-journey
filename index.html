@@ -4836,7 +4836,7 @@ section.chapter{padding:150px 0}
 .dt-nav button{width:40px;height:40px;border-radius:999px;border:1px solid var(--line-2);display:grid;place-items:center;font-size:16px;transition:background .25s}
 .dt-nav button:hover{background:var(--paper-2)}
 .pdetail.dark .dt-nav button:hover{background:rgba(255,255,255,.08)}
-@media (max-height:780px) and (min-width:768px){ .plan-sub{display:none} .dt-num{font-size:52px} .dt-meta{margin-top:8px} .dt-seg{display:none} .pdetail{padding:20px 22px} .dt-focus{font-size:19px;margin-top:14px} .dt-steps{gap:6px;margin-top:10px} .dt-steps li{font-size:13.5px} .dt-q{padding:7px 12px} .dt-qs{margin-top:10px;gap:4px} .dt-foot{padding-top:12px} }
+@media (max-height:780px) and (min-width:768px){ .dt-why{display:none} .plan-sub{display:none} .dt-num{font-size:52px} .dt-meta{margin-top:8px} .dt-seg{display:none} .pdetail{padding:20px 22px} .dt-focus{font-size:19px;margin-top:14px} .dt-steps{gap:6px;margin-top:10px} .dt-steps li{font-size:13.5px} .dt-q{padding:7px 12px} .dt-qs{margin-top:10px;gap:4px} .dt-foot{padding-top:12px} }
 @media (max-width:1500px) and (min-width:768px){ .pd-chip{max-width:250px} .prow{grid-template-columns:28px 76px 84px minmax(0,1fr) auto 26px;gap:10px} }
 @media (max-width:1400px) and (min-width:768px){ .plan-body{grid-template-columns:minmax(0,1fr) 330px} .pdetail{padding:22px} .pd-chip{max-width:170px} .pd-date{font-size:11px} .plabel.one span{display:none} }
 @media (max-width:1100px) and (min-width:768px){ .plan-body{grid-template-columns:minmax(0,1fr) 320px} .pd-chips{display:none} .prow{grid-template-columns:30px 84px 80px minmax(0,1fr) 26px} }
@@ -4890,6 +4890,31 @@ section.chapter{padding:150px 0}
 .drawer .x{position:absolute;top:18px;right:18px;width:40px;height:40px;border-radius:999px;border:1px solid var(--line);display:grid;place-items:center;font-size:18px}
 .drawer h4{font-size:30px;letter-spacing:-.03em;line-height:1.1;margin-top:8px;padding-right:48px}
 .kv{display:grid;grid-template-columns:120px 1fr;gap:10px 16px;margin-top:24px;font-size:14px}
+.qlinks{display:flex;flex-wrap:wrap;gap:6px}
+.qlink{display:inline-flex;align-items:center;gap:6px;font-size:12.5px;line-height:1;padding:7px 11px;border-radius:999px;border:1px solid var(--line-2);color:var(--ink);text-decoration:none;background:var(--card);white-space:nowrap;transition:background .25s,border-color .25s,color .25s,transform .25s var(--ease)}
+.qlink i{font-size:14px}
+.qlink:hover{border-color:var(--ink);transform:translateY(-1px)}
+.qlink.primary{background:var(--ink);color:#fafaf8;border-color:var(--ink)}
+.qlink.primary:hover{background:var(--accent);border-color:var(--accent)}
+.qlink small{font-family:var(--mono);font-size:10.5px;opacity:.7}
+.pdetail.dark .qlink{background:transparent;color:#f4f4f1;border-color:rgba(255,255,255,.22)}
+.pdetail.dark .qlink.primary{background:#f4f4f1;color:var(--ink);border-color:#f4f4f1}
+.qlinks-empty{font-size:12.5px;color:var(--mute)}
+.qhint{font-size:12px;color:var(--mute);margin-top:6px;display:flex;gap:6px;align-items:flex-start}
+.qhint i{font-size:13px;margin-top:1px}
+.why{margin-top:18px;padding:12px 14px;border-radius:12px;background:var(--accent-soft);color:var(--accent-ink);font-size:13.5px;line-height:1.45;display:flex;gap:8px}
+.why i{font-size:16px;flex:none;margin-top:1px}
+.dlinks{margin-top:18px}
+.dlinks h5{font-size:12px;font-family:var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--mute);font-weight:500;margin-bottom:10px}
+.dt-qc{border:1px solid var(--line);border-radius:12px;padding:10px 12px;display:flex;flex-direction:column;gap:8px}
+.pdetail.dark .dt-qc{border-color:rgba(255,255,255,.14)}
+.dt-qtop{display:flex;justify-content:space-between;align-items:center;gap:10px;text-align:left;width:100%}
+.dt-qtop b{font-size:14px;font-weight:500}
+.dt-qtop .dt-right{font-family:var(--mono);font-size:11.5px;color:var(--mute);white-space:nowrap}
+.dt-qtop:hover b{text-decoration:underline;text-underline-offset:3px}
+.dt-why{font-size:11.5px;color:var(--accent-ink);display:flex;gap:5px;align-items:flex-start;line-height:1.4}
+.pdetail.dark .dt-why{color:#f2a487}
+.yr-old{display:inline-block;margin-left:6px;font-size:10px;font-family:var(--mono);padding:2px 6px;border-radius:999px;background:var(--accent-soft);color:var(--accent-ink);vertical-align:1px}
 .kv dt{color:var(--mute)}
 .att{margin-top:26px;display:grid;gap:10px}
 .att .a{border:1px solid var(--line);border-radius:12px;padding:14px 16px;display:flex;justify-content:space-between;gap:12px}
@@ -5030,7 +5055,7 @@ section.chapter{padding:150px 0}
             <svg class="gauge" viewBox="0 0 320 200" id="gauge" aria-label="Readiness gauge"></svg>
             <div class="parts" id="readyParts"></div>
           </div>
-          <p class="note">Readiness blends coverage of the 27 core questions, your average score on them and your mock average. It is a coaching signal, not an exam prediction. Fifty is the pass line.</p>
+          <p class="note">Readiness blends coverage of the core questions, your average score on them and your mock average. It is a coaching signal, not an exam prediction. Fifty is the pass line.</p>
         </article>
         <article class="card c-q rv">
           <h3><i class="ph ph-stack"></i>Core questions</h3>
@@ -5097,12 +5122,12 @@ section.chapter{padding:150px 0}
     <div class="wrap">
       <h2 class="h2 rv">The question library</h2>
       <div class="filters" role="toolbar" aria-label="Filter questions">
-        <button class="fbtn on" data-f="core">Core 27</button>
+        <button class="fbtn on" data-f="core" id="fCore">Core</button>
         <button class="fbtn" data-f="1">Must do</button>
         <button class="fbtn" data-f="2">Should do</button>
         <button class="fbtn" data-f="3">Stretch</button>
-        <button class="fbtn" data-f="Mock">In mocks</button>
-        <button class="fbtn" data-f="all">All 52</button>
+        <button class="fbtn" data-f="old">Older, with a reason</button>
+        <button class="fbtn" data-f="all" id="fAll">All</button>
         <div class="fsel">
           <label for="topicSel">Topic</label>
           <select id="topicSel"><option value="">All topics</option></select>
@@ -5173,7 +5198,8 @@ window.AFM_DATA = {
   "candidate": "AFM candidate",
   "start": "2026-11-19",
   "exam": "2026-12-11",
-  "updated": "2026-11-20"
+  "updated": "2026-11-20",
+  "planRule": "Recent papers (2023+) from the tutor's top-51 list; older only with a stated reason; Jun 2026 paper kept unseen for Mock 6."
  },
  "topicFrequency": {
   "FX hedging": 5,
@@ -5193,8 +5219,8 @@ window.AFM_DATA = {
    "day": 1,
    "phase": "1 Foundations",
    "hours": 3,
-   "focus": "M&A (you already watched 3 videos)",
-   "tasks": "Re-attempt Vogel unseen under time (45 min) + mark. Attempt Oxwick yourself (45 min) + mark. Send both to Claude.",
+   "focus": "M&A valuation (done)",
+   "tasks": "Watched the Vogel, Makonis and Oxwick videos. Attempted Oxwick after its video: 20/25. Lessons are in the mistake ledger.",
    "status": "Done",
    "actualHours": 3
   },
@@ -5203,7 +5229,7 @@ window.AFM_DATA = {
    "phase": "1 Foundations",
    "hours": 3,
    "focus": "FX hedging",
-   "tasks": "Watch Gogarth video solution, then attempt it yourself (45 min) + mark. Read Technical Summary P2.7 (hedging table) + Jun 2021 examiner report Q3.",
+   "tasks": "Finish the Gogarth video, then attempt it yourself (45 min) + mark. Read Technical Summary P2.7 (hedging set-up table) and the Jun 2021 examiner report on Q3.",
    "status": null,
    "actualHours": null
   },
@@ -5211,8 +5237,8 @@ window.AFM_DATA = {
    "day": 3,
    "phase": "1 Foundations",
    "hours": 3,
-   "focus": "FX hedging",
-   "tasks": "Lough (forward, money market hedge, futures, options) 45 min + mark. Nutourne 45 min + mark. Error log.",
+   "focus": "FX hedging + unseen M&A",
+   "tasks": "Attempt Passmore unseen (45 min) + mark. Check your set-up line by line: buy/sell, number of contracts, month, option type. Then attempt Garnod unseen and timed (45 min) + mark: your first true M&A baseline.",
    "status": null,
    "actualHours": null
   },
@@ -5221,7 +5247,7 @@ window.AFM_DATA = {
    "phase": "1 Foundations",
    "hours": 4,
    "focus": "Interest rate hedging",
-   "tasks": "Watch Brandon video, then attempt it (45 min) + mark. Abertafol self-attempt (45 min) + mark against the Dec 2023 examiner report.",
+   "tasks": "Watch the Abertafol video, then attempt it yourself (45 min) + mark. Attempt Sohbet unseen (45 min) + mark. Ignore under/over-hedge; use the lock-in rate only when no forecast rates are given.",
    "status": null,
    "actualHours": null
   },
@@ -5230,7 +5256,7 @@ window.AFM_DATA = {
    "phase": "1 Foundations",
    "hours": 4,
    "focus": "Investment appraisal + BSOP",
-   "tasks": "Watch Colvin video, then attempt + compare with the 3 marked scripts in Mind of the Marker Q2. Digunder (BSOP real option) 36 min + mark.",
+   "tasks": "Watch the Blackbosca video, then attempt it yourself (45 min) + mark. Attempt Littlebredy unseen with the Black-Scholes calculator (45 min) + mark.",
    "status": null,
    "actualHours": null
   },
@@ -5239,7 +5265,7 @@ window.AFM_DATA = {
    "phase": "1 Foundations",
    "hours": 4,
    "focus": "International NPV (50-marker)",
-   "tasks": "McKeever FULL 90 min timed, report format. Mark (send to Claude). Fix NPV mechanics errors; read Dec 2025 Drimpton examiner notes.",
+   "tasks": "Attempt McKeever as a full Section A report (90 min) + mark. Use report format: short introduction, a heading per requirement, conclusion.",
    "status": null,
    "actualHours": null
   },
@@ -5247,8 +5273,8 @@ window.AFM_DATA = {
    "day": 7,
    "phase": "2 Build speed",
    "hours": 5,
-   "focus": "APV + dividend capacity",
-   "tasks": "Watch Burung video, then attempt (45 min) + mark. Cadnam self-attempt (45 min) + mark. Redo Gogarth calculations only (30 min).",
+   "focus": "Dividend capacity + IPO valuation",
+   "tasks": "Watch the Cadnam video, then attempt it yourself (45 min) + mark. Attempt Zulla unseen (45 min) + mark.",
    "status": null,
    "actualHours": null
   },
@@ -5256,8 +5282,8 @@ window.AFM_DATA = {
    "day": 8,
    "phase": "2 Build speed",
    "hours": 5,
-   "focus": "Reconstruction & unbundling",
-   "tasks": "Watch Newimber video, then attempt + mark. Eview self-attempt + mark. Learn definitions: MBO/MBI, sell-off/demerger/spin-off, IPO vs reverse takeover (Tech Summary P2.10).",
+   "focus": "M&A 50-marker",
+   "tasks": "Attempt Joshua as a full report (90 min) + mark. Attempt Mortexa unseen (45 min) + mark.",
    "status": null,
    "actualHours": null
   },
@@ -5265,8 +5291,8 @@ window.AFM_DATA = {
    "day": 9,
    "phase": "2 Build speed",
    "hours": 5,
-   "focus": "M&A 50-marker + ratio analysis",
-   "tasks": "Joshua FULL 90 min timed + mark. Southmed (ratio + segment analysis, ~10 ratio rows) 45 min + mark.",
+   "focus": "Reconstruction + ratio analysis",
+   "tasks": "Watch the Newimber video, then attempt it yourself (45 min) + mark. Work through the NPP & Sun handout (demerger, share-for-share ratio). Attempt GCR unseen (45 min) + mark.",
    "status": null,
    "actualHours": null
   },
@@ -5274,8 +5300,8 @@ window.AFM_DATA = {
    "day": 10,
    "phase": "2 Build speed",
    "hours": 5,
-   "focus": "Interest rate round 2: collars, netting, margins",
-   "tasks": "Daikon (IR futures, options, collar, mark-to-market) + Armstrong (netting + deposit collar). Redo Brandon calcs (30 min). Read ACCA 'Foreign currency futures - step by step' article.",
+   "focus": "Hedging 50-marker",
+   "tasks": "Attempt Mahoney as a full report (90 min) + mark. Redo any hedging question that scored under 50%.",
    "status": null,
    "actualHours": null
   },
@@ -5284,7 +5310,7 @@ window.AFM_DATA = {
    "phase": "2 Build speed",
    "hours": 6,
    "focus": "APV 50-marker + bonds",
-   "tasks": "Zhichi FULL 90 min + mark. Pault (spot yield curve, bond value, credit spread) 45 min + mark. Redo weakest FX question calcs.",
+   "tasks": "Attempt Zhichi as a full report (90 min) + mark. Watch the Pault video, then attempt it yourself (45 min) + mark.",
    "status": null,
    "actualHours": null
   },
@@ -5292,8 +5318,8 @@ window.AFM_DATA = {
    "day": 12,
    "phase": "2 Build speed",
    "hours": 6,
-   "focus": "International NPV 50-marker + M&A",
-   "tasks": "Prysor FULL 90 min + mark. Kerrin & Danton 45 min + mark. Review error log + progress log.",
+   "focus": "Hedging 50-marker + swaps",
+   "tasks": "Attempt Northney as a full report (90 min) + mark. Attempt Fitzharis, the interest rate swap question (45 min) + mark.",
    "status": null,
    "actualHours": null
   },
@@ -5301,8 +5327,8 @@ window.AFM_DATA = {
    "day": 13,
    "phase": "2 Build speed",
    "hours": 6,
-   "focus": "Interest rate 50-marker + swaps",
-   "tasks": "Fonder FULL 90 min + mark. Fitzharis (interest rate swap) 45 min + mark. Redo weakest question from the error log.",
+   "focus": "M&A 50-marker",
+   "tasks": "Attempt Kampai as a full all-report question (90 min) + mark. Attempt Halstock unseen (45 min) + mark.",
    "status": null,
    "actualHours": null
   },
@@ -5310,8 +5336,8 @@ window.AFM_DATA = {
    "day": 14,
    "phase": "2 Build speed",
    "hours": 6,
-   "focus": "Mixed fast round",
-   "tasks": "Louieed (implied P/E), Staple (restructuring), Arthuro (dividend capacity): 45 min each, all timed, + mark. 30 min formulae sheet drill.",
+   "focus": "International NPV 50-marker + reconstruction",
+   "tasks": "Attempt Drimpton as a full report (90 min) + mark. Attempt Eview (45 min) + mark. Redo your weakest question so far.",
    "status": null,
    "actualHours": null
   },
@@ -5392,26 +5418,21 @@ window.AFM_DATA = {
   {
    "id": "Q01",
    "tier": 1,
-   "name": "Vogel Co",
-   "sitting": "Jun 2014 Q3",
-   "marks": 25,
-   "topic": "M&A & valuation",
-   "note": "mergers and acquisitions",
-   "day": 1,
-   "where": "Tutor portal (Live Mar 2023) / project p4 file p.180-181",
-   "video": true,
-   "attempts": []
-  },
-  {
-   "id": "Q02",
-   "tier": 1,
    "name": "Oxwick Co",
    "sitting": "Jun 2023 Q2",
    "marks": 25,
    "topic": "M&A & valuation",
-   "note": "mergers and acquisitions",
+   "note": "",
+   "why": null,
    "day": 1,
-   "where": "Tutor portal (June 2023 past paper tab)",
+   "where": "Drive: Past papers and relevant material > march june 2023",
+   "links": {
+    "q": "https://drive.google.com/file/d/1aqZ_KAuRuvn3zHifESd0NHlqQMGaZjGy/view",
+    "a": "https://drive.google.com/file/d/1_3F9lStuSx0ccAl_CIwOwq8pZc7egISY/view",
+    "paperFolder": "https://drive.google.com/drive/folders/172iQtg-7CgyDyNYQ9WjFkfFvI2DXLyd4",
+    "notes": "https://drive.google.com/file/d/1yiTHRIwNFo3vo2RdczA8BiYUb6T4azDo/view",
+    "folder": "https://drive.google.com/drive/folders/1iQ8pYVPamSZrKSwSMPzTU8C58qVESGIk"
+   },
    "video": true,
    "attempts": [
     {
@@ -5423,652 +5444,1184 @@ window.AFM_DATA = {
    ]
   },
   {
+   "id": "Q02",
+   "tier": 1,
+   "name": "Garnod Co",
+   "sitting": "Jun 2024 Q3",
+   "marks": 25,
+   "topic": "M&A & valuation",
+   "note": "Your first unseen, timed M&A attempt (baseline). Also in Mock 1 (Jun 2024 paper).",
+   "why": null,
+   "day": 3,
+   "where": "Drive: Past papers and relevant material > March/June 2024 past paper and relevant material",
+   "links": {
+    "q": "https://drive.google.com/file/d/1OuGtlRhiI5NdwrLfC0Bgn3xC4eQk0RhZ/view",
+    "a": "https://drive.google.com/file/d/1dVmmg3OUd1CHOt0IUUw0lYR7nxF1Gaft/view",
+    "paperFolder": "https://drive.google.com/drive/folders/17kD5IVxm-DvswKoZno0QS3XsGzT6AZgP",
+    "notes": "https://drive.google.com/file/d/1mNye_zoTa6vjDrJ3F05NjKyvVgI9-hY0/view",
+    "xlsx": "https://drive.google.com/file/d/1eI3Bn-ti-nKps3VGglGo51yBjyBbSWqt/view"
+   },
+   "video": false,
+   "attempts": []
+  },
+  {
    "id": "Q03",
    "tier": 1,
    "name": "Gogarth Co",
    "sitting": "Jun 2021 Q3",
    "marks": 25,
    "topic": "FX hedging",
-   "note": "Foreign currency hedging",
+   "note": "",
+   "why": "Kept on purpose: you have already started its video. Examiner report in the project.",
    "day": 2,
-   "where": "Tutor portal (Live Jun 2023) - examiner report in project",
+   "where": "Drive: Past papers and relevant material > Jun 2021 past paper and relevant material",
+   "links": {
+    "q": "https://drive.google.com/file/d/1miRSYfqZ7r2mvb5XMPGcZ5PYpKTw3J1X/view",
+    "a": "https://drive.google.com/file/d/1bGcW1vXQq5267FKbqtXpbeUmFUKpFUaB/view",
+    "paperFolder": "https://drive.google.com/drive/folders/1wCaXItbOdy_19k1YwolEC_2wg-OUWLil",
+    "notes": "https://drive.google.com/file/d/1S30XL5fjuRROlTtJarqcCT19kttp70Nl/view",
+    "xlsx": "https://drive.google.com/file/d/1Zc37UaWOeXjzD3da5RssywVEMMhzwVpa/view",
+    "folder": "https://drive.google.com/drive/folders/15A7osKshiU00klc3pJXOhn8z6rC1OBvX"
+   },
    "video": false,
    "attempts": []
   },
   {
    "id": "Q04",
    "tier": 1,
-   "name": "Lough Co",
-   "sitting": "Sep 2022 Q2",
+   "name": "Passmore Co",
+   "sitting": "Dec 2025 Q3",
    "marks": 25,
    "topic": "FX hedging",
-   "note": "FX hedging incl. money market hedge",
+   "note": "Forward, futures and options on a rupee receipt + treasury's contribution. Also in Mock 4.",
+   "why": null,
    "day": 3,
-   "where": "Tutor portal (Live Sep 2023)",
+   "where": "Drive: Past papers and relevant material > September December 2025 past paper",
+   "links": {
+    "q": "https://drive.google.com/file/d/1UlZLuQkLcLKrlp4PR5le69TKdKEZXAzQ/view",
+    "a": "https://drive.google.com/file/d/1UimKd767R6bfTX8xV7Xd2uNeoVoA68qE/view",
+    "paperFolder": "https://drive.google.com/drive/folders/19FKtKvnf3-cM3Mpp8JvMGTNteJXMkMBq"
+   },
    "video": false,
    "attempts": []
   },
   {
    "id": "Q05",
    "tier": 1,
-   "name": "Nutourne Co",
-   "sitting": "Dec 2018 Q2",
+   "name": "Abertafol Co",
+   "sitting": "Dec 2023 Q3",
    "marks": 25,
-   "topic": "FX hedging",
-   "note": "Foreign currency hedging",
-   "day": 3,
-   "where": "Tutor portal (Practice yourself - 21)",
+   "topic": "Interest rate hedging & netting",
+   "note": "Futures for a loan, options for a deposit. Examiner report in the project.",
+   "why": null,
+   "day": 4,
+   "where": "Drive: Past papers and relevant material > December 2023 past paper and relevant material",
+   "links": {
+    "q": "https://drive.google.com/file/d/1Szcv--10lZ_gBRUQyYXfX4N4Fifd1HQK/view",
+    "a": "https://drive.google.com/file/d/1asE4j3qkJ0lWC_Nug4UfzBXCS9wt-QwD/view",
+    "paperFolder": "https://drive.google.com/drive/folders/1Sk9smfCduAVxcjaGGvY3a0pRvgHrD8pv",
+    "notes": "https://drive.google.com/file/d/1njpR8Ke4Ayn3cvOWfq8C7_HpL65LTNy_/view",
+    "xlsx": "https://drive.google.com/file/d/1HLzHS8ZjFIHY9G6G5HxoDpPTn6b2ecxT/view"
+   },
    "video": false,
    "attempts": []
   },
   {
    "id": "Q06",
    "tier": 1,
-   "name": "Brandon Co",
-   "sitting": "Dec 2021 Q2",
+   "name": "Sohbet Co",
+   "sitting": "Jun 2025 Q2",
    "marks": 25,
    "topic": "Interest rate hedging & netting",
-   "note": "Interest rate hedging",
+   "note": "IR futures + options on futures for a deposit. Also in Mock 3.",
+   "why": null,
    "day": 4,
-   "where": "Tutor portal (Live Sep 2023) - examiner report in project",
+   "where": "Drive: Past papers and relevant material > June 2025 past paper and relevant material",
+   "links": {
+    "q": "https://drive.google.com/file/d/1-nDU2qeq_gTI_iQYnZ6ish0EV__12eyA/view",
+    "a": "https://drive.google.com/file/d/1xOQ_38AcY60C05ha01rRrBDZuslq8kyN/view",
+    "paperFolder": "https://drive.google.com/drive/folders/17M9tdGWHYuocvS470L-WNZfjxwKyHEK3",
+    "notes": "https://drive.google.com/file/d/1IV5gHcuTI_BUQQdfHcggK6_qCqAlcaNZ/view",
+    "xlsx": "https://drive.google.com/file/d/1Kr5knuInbFqnIZJmguYPZl_Iqg8m5tRB/view"
+   },
    "video": false,
    "attempts": []
   },
   {
    "id": "Q07",
-   "tier": 1,
-   "name": "Abertafol Co",
-   "sitting": "Dec 2023 Q3",
+   "tier": 2,
+   "name": "Blackbosca Co",
+   "sitting": "Jun 2023 Q3",
    "marks": 25,
-   "topic": "Interest rate hedging & netting",
-   "note": "Interest rate hedging",
-   "day": 4,
-   "where": "Tutor portal (Game changer) - examiner report in project",
+   "topic": "Investment appraisal (NPV / international)",
+   "note": "",
+   "why": null,
+   "day": 5,
+   "where": "Drive: Past papers and relevant material > march june 2023",
+   "links": {
+    "q": "https://drive.google.com/file/d/1aqZ_KAuRuvn3zHifESd0NHlqQMGaZjGy/view",
+    "a": "https://drive.google.com/file/d/1_3F9lStuSx0ccAl_CIwOwq8pZc7egISY/view",
+    "paperFolder": "https://drive.google.com/drive/folders/172iQtg-7CgyDyNYQ9WjFkfFvI2DXLyd4",
+    "notes": "https://drive.google.com/file/d/1RCWYGZkXapylNUgY6Blvr_5G2i8m9UQb/view",
+    "xlsx": "https://drive.google.com/file/d/1wm4FJ6ydGUuaVUTEYVH12Qv1DwCmW31J/view",
+    "folder": "https://drive.google.com/drive/folders/1hXm0jrF5Z7UqJLOcbAitXV8ZpaFYXvds"
+   },
    "video": false,
    "attempts": []
   },
   {
    "id": "Q08",
    "tier": 1,
-   "name": "Colvin Co",
-   "sitting": "Dec 2020 Q2 / specimen Q2",
+   "name": "Littlebredy Co",
+   "sitting": "Jun 2024 Q2",
    "marks": 25,
-   "topic": "Investment appraisal (NPV / international)",
-   "note": "International investment appraisal",
+   "topic": "Real options / Black-Scholes",
+   "note": "NPV + Black-Scholes real option (calculator supplied). Also in Mock 1.",
+   "why": null,
    "day": 5,
-   "where": "Tutor portal (Live Sep 2023) - 3 marked scripts in project (Mind of Marker Q2)",
+   "where": "Drive: Past papers and relevant material > March/June 2024 past paper and relevant material",
+   "links": {
+    "q": "https://drive.google.com/file/d/1OuGtlRhiI5NdwrLfC0Bgn3xC4eQk0RhZ/view",
+    "a": "https://drive.google.com/file/d/1dVmmg3OUd1CHOt0IUUw0lYR7nxF1Gaft/view",
+    "paperFolder": "https://drive.google.com/drive/folders/17kD5IVxm-DvswKoZno0QS3XsGzT6AZgP",
+    "notes": "https://drive.google.com/file/d/16ENcBW48eQ5vLbOYM56GwiDhKFLLgDhY/view",
+    "xlsx": "https://drive.google.com/file/d/1Ucds7a03mmnT9mzgK8QYK3CwBQ0sxzmN/view"
+   },
    "video": false,
    "attempts": []
   },
   {
    "id": "Q09",
    "tier": 1,
-   "name": "Digunder",
-   "sitting": "Dec 2007 Q3",
-   "marks": 20,
-   "topic": "Real options / Black-Scholes",
-   "note": "BSOP model",
-   "day": 5,
-   "where": "Tutor portal (Practice yourself - 23) / project p4 file p.19",
+   "name": "McKeever Co",
+   "sitting": "Dec 2023 Q1",
+   "marks": 50,
+   "topic": "Investment appraisal (NPV / international)",
+   "note": "International NPV report. Examiner report in the project.",
+   "why": null,
+   "day": 6,
+   "where": "Drive: Past papers and relevant material > December 2023 past paper and relevant material",
+   "links": {
+    "q": "https://drive.google.com/file/d/1Szcv--10lZ_gBRUQyYXfX4N4Fifd1HQK/view",
+    "a": "https://drive.google.com/file/d/1asE4j3qkJ0lWC_Nug4UfzBXCS9wt-QwD/view",
+    "paperFolder": "https://drive.google.com/drive/folders/1Sk9smfCduAVxcjaGGvY3a0pRvgHrD8pv",
+    "notes": "https://drive.google.com/file/d/1l7c17tI1az9_BwEcKfZoiUYjnbrLXIQE/view",
+    "xlsx": "https://drive.google.com/file/d/1AX4bcdHGyQXPJyymkDXvSSLvNhJDoVgA/view"
+   },
    "video": false,
    "attempts": []
   },
   {
    "id": "Q10",
    "tier": 1,
-   "name": "McKeever Co",
-   "sitting": "Dec 2023 Q1",
-   "marks": 50,
-   "topic": "Investment appraisal (NPV / international)",
-   "note": "International investment appraisal",
-   "day": 6,
-   "where": "Tutor portal (Game changer) - examiner report in project",
+   "name": "Cadnam Co",
+   "sitting": "Dec 2019 Q2",
+   "marks": 25,
+   "topic": "Dividend capacity & policy",
+   "note": "",
+   "why": "Dividend capacity was last examined in Jun 2026 Q1, which stays unseen for Mock 6, and no 2023-2025 paper on the list tests it. Cadnam is the newest dividend-capacity question on the list.",
+   "day": 7,
+   "where": "Drive: Past papers and relevant material > Dec 2019 past paper and relevant material",
+   "links": {
+    "q": "https://drive.google.com/file/d/17i_nMlecgL09tIZxpv0HSu_DCktOeya-/view",
+    "a": "https://drive.google.com/file/d/1uOZfAZ1SjVEq1H_38JC5-omXJN5SeNFO/view",
+    "paperFolder": "https://drive.google.com/drive/folders/1sNgcNUQOYLjqAAxq9DNcI7jSJrmJP59w",
+    "notes": "https://drive.google.com/file/d/1Mk0EJBYBNcAio-x_urxYEPhJSu0RX-xJ/view",
+    "notesKind": "summary",
+    "xlsx": "https://drive.google.com/file/d/1rHaUXEqVi81ntePxfo-8px5xQToVQrvE/view",
+    "folder": "https://drive.google.com/drive/folders/1T7BE-snXSaY19MMDO4x6XrD6UcQP5IXk"
+   },
    "video": false,
    "attempts": []
   },
   {
    "id": "Q11",
    "tier": 1,
-   "name": "Burung Co",
-   "sitting": "Jun 2014 Q2",
+   "name": "Zulla Co",
+   "sitting": "Dec 2024 Q3",
    "marks": 25,
-   "topic": "Cost of capital & APV",
-   "note": "Adjusted present value",
+   "topic": "M&A & valuation",
+   "note": "IPO valuation (DVM, FCFF), FCF vs dividends, reverse takeover vs IPO. Also in Mock 2.",
+   "why": null,
    "day": 7,
-   "where": "Tutor portal (Live Mar 2023) / project p4 file p.178-179",
+   "where": "Drive: Past papers and relevant material > December 2024 past paper and relevant material",
+   "links": {
+    "q": "https://drive.google.com/file/d/13Uet8PA4tGeasfB_OCpWu5PUpGq-F8p7/view",
+    "a": "https://drive.google.com/file/d/1E71aZqYJ4Y1L9bhOmQNbN3ppqqxQzKFw/view",
+    "paperFolder": "https://drive.google.com/drive/folders/1glg5tejEQcyNOVslsy0W188r2LshpK0V"
+   },
    "video": false,
    "attempts": []
   },
   {
    "id": "Q12",
    "tier": 1,
-   "name": "Cadnam Co",
-   "sitting": "Dec 2019 Q2",
-   "marks": 25,
-   "topic": "Dividend capacity & policy",
-   "note": "Dividend capacity",
-   "day": 7,
-   "where": "Tutor portal (Live Mar 2023)",
+   "name": "Joshua Co",
+   "sitting": "Jun 2023 Q1",
+   "marks": 50,
+   "topic": "M&A & valuation",
+   "note": "",
+   "why": null,
+   "day": 8,
+   "where": "Drive: Past papers and relevant material > march june 2023",
+   "links": {
+    "q": "https://drive.google.com/file/d/1aqZ_KAuRuvn3zHifESd0NHlqQMGaZjGy/view",
+    "a": "https://drive.google.com/file/d/1_3F9lStuSx0ccAl_CIwOwq8pZc7egISY/view",
+    "paperFolder": "https://drive.google.com/drive/folders/172iQtg-7CgyDyNYQ9WjFkfFvI2DXLyd4",
+    "folder": "https://drive.google.com/drive/folders/18JlQYsSyhrOBj8nXirdoHJW7GTXqoBiu"
+   },
    "video": false,
    "attempts": []
   },
   {
    "id": "Q13",
-   "tier": 1,
-   "name": "Newimber Co",
-   "sitting": "Jun 2019 Q3",
+   "tier": 2,
+   "name": "Mortexa Co",
+   "sitting": "Dec 2024 Q2",
    "marks": 25,
-   "topic": "Reconstruction & unbundling",
-   "note": "corporate restructuring",
+   "topic": "M&A & valuation",
+   "note": "P/E value, share-for-share, EPS, competition authority. Also in Mock 2.",
+   "why": null,
    "day": 8,
-   "where": "Tutor portal (Past paper bank)",
+   "where": "Drive: Past papers and relevant material > December 2024 past paper and relevant material",
+   "links": {
+    "q": "https://drive.google.com/file/d/13Uet8PA4tGeasfB_OCpWu5PUpGq-F8p7/view",
+    "a": "https://drive.google.com/file/d/1E71aZqYJ4Y1L9bhOmQNbN3ppqqxQzKFw/view",
+    "paperFolder": "https://drive.google.com/drive/folders/1glg5tejEQcyNOVslsy0W188r2LshpK0V"
+   },
    "video": false,
    "attempts": []
   },
   {
    "id": "Q14",
    "tier": 1,
-   "name": "Eview Co",
-   "sitting": "Dec 2017 Q2",
+   "name": "Newimber Co",
+   "sitting": "Jun 2019 Q3",
    "marks": 25,
    "topic": "Reconstruction & unbundling",
-   "note": "corporate restructuring",
-   "day": 8,
-   "where": "Tutor portal (Live Jun 2023)",
+   "note": "",
+   "why": "Reconstruction appears in 4 of the last 8 sittings, but no 2023-2025 paper on the list has a reconstruction question (Jun 2026 stays unseen). Newimber is the newest on the list.",
+   "day": 9,
+   "where": "Drive: Past papers and relevant material > Jun 2019 past paper and relevant material",
+   "links": {
+    "q": "https://drive.google.com/file/d/16D5eDFDzs27NFe_8cSn9Cwarqaa427ml/view",
+    "a": "https://drive.google.com/file/d/1fmV2lXDu7NBi01iIR5RDdXIX0Gy7DxKS/view",
+    "paperFolder": "https://drive.google.com/drive/folders/1tNvTuOETglEzEFuPP1pWf5wCcu2oMo7j",
+    "notes": "https://drive.google.com/file/d/1skXUWUc6w_dsgvbO2AwRKrNB8s9TYYDT/view",
+    "notesKind": "summary",
+    "xlsx": "https://drive.google.com/file/d/1VnIQDGcSqFkAWtsMmRH9jVeI0g_iCOvn/view",
+    "folder": "https://drive.google.com/drive/folders/1j_0UH6sSWZKAse3Ciy91wPh85DQKzHVP"
+   },
    "video": false,
    "attempts": []
   },
   {
    "id": "Q15",
-   "tier": 1,
-   "name": "Joshua Co",
-   "sitting": "Jun 2023 Q1",
-   "marks": 50,
-   "topic": "M&A & valuation",
-   "note": "Mergers and acquisitions",
+   "tier": 2,
+   "name": "NPP Ltd & Sun plc",
+   "sitting": "Jun 2024 webinar handout",
+   "marks": null,
+   "topic": "Reconstruction & unbundling",
+   "note": "Tutor handout: demerger and share-for-share ratio. Open it from the tutor portal (June 2024 webinar).",
+   "why": null,
    "day": 9,
-   "where": "Tutor portal (Live Sep 2023)",
+   "where": "Tutor portal: June 2024 webinar handout",
+   "links": {},
    "video": false,
    "attempts": []
   },
   {
    "id": "Q16",
    "tier": 1,
-   "name": "Southmed Co",
-   "sitting": "Dec 2023 Q2",
+   "name": "GCR Co",
+   "sitting": "Jun 2025 Q3",
    "marks": 25,
    "topic": "Performance / ratio analysis",
-   "note": "NOT on tutor list - added (tested Dec23 + Jun25)",
+   "note": "Ratio and trend analysis, omissions. Also in Mock 3.",
+   "why": null,
    "day": 9,
-   "where": "ACCA Practice Platform (Sep/Dec 2023) - examiner report in project",
+   "where": "Drive: Past papers and relevant material > June 2025 past paper and relevant material",
+   "links": {
+    "q": "https://drive.google.com/file/d/1-nDU2qeq_gTI_iQYnZ6ish0EV__12eyA/view",
+    "a": "https://drive.google.com/file/d/1xOQ_38AcY60C05ha01rRrBDZuslq8kyN/view",
+    "paperFolder": "https://drive.google.com/drive/folders/17M9tdGWHYuocvS470L-WNZfjxwKyHEK3"
+   },
    "video": false,
    "attempts": []
   },
   {
    "id": "Q17",
    "tier": 1,
-   "name": "Daikon Co",
-   "sitting": "Jun 2015 Q4",
-   "marks": 25,
-   "topic": "Interest rate hedging & netting",
-   "note": "Tutor tags FX hedging - actually IR futures/options/collar + margins",
+   "name": "Mahoney Co",
+   "sitting": "Jun 2024 Q1",
+   "marks": 50,
+   "topic": "FX hedging",
+   "note": "Netting, forward vs futures, currency swap vs option. Also in Mock 1.",
+   "why": null,
    "day": 10,
-   "where": "Tutor portal (Practice yourself - 20) / project p4 file p.207",
+   "where": "Drive: Past papers and relevant material > March/June 2024 past paper and relevant material",
+   "links": {
+    "q": "https://drive.google.com/file/d/1OuGtlRhiI5NdwrLfC0Bgn3xC4eQk0RhZ/view",
+    "a": "https://drive.google.com/file/d/1dVmmg3OUd1CHOt0IUUw0lYR7nxF1Gaft/view",
+    "paperFolder": "https://drive.google.com/drive/folders/17kD5IVxm-DvswKoZno0QS3XsGzT6AZgP",
+    "notes": "https://drive.google.com/file/d/1iJ8Hik7FnpJdGygnl5vb89nF9YlaOIH0/view",
+    "xlsx": "https://drive.google.com/file/d/1LtI7qFP7KZszUB7Lor6Us_9waPU55cYC/view"
+   },
    "video": false,
    "attempts": []
   },
   {
    "id": "Q18",
    "tier": 1,
-   "name": "Armstrong Group",
-   "sitting": "Dec 2015 Q2",
-   "marks": 25,
-   "topic": "Interest rate hedging & netting",
-   "note": "Tutor tags FX hedging - actually netting + deposit collar",
-   "day": 10,
-   "where": "Tutor portal (Practice yourself - 17) / project p4 file p.218-219",
+   "name": "Zhichi Co",
+   "sitting": "Dec 2021 Q1",
+   "marks": 50,
+   "topic": "Cost of capital & APV",
+   "note": "",
+   "why": "APV has not been examined since this paper (Dec 2021), and no 2023-2025 question on the list covers it. Zhichi is the newest APV question and has an examiner report in the project.",
+   "day": 11,
+   "where": "Drive: Past papers and relevant material > Dec 2021 past paper and relevant material",
+   "links": {
+    "q": "https://drive.google.com/file/d/1Jn-R-bTb06JQZ56pm_Vaf0pbvCwY7luq/view",
+    "a": "https://drive.google.com/file/d/1gx7dcLKWNeelL2buWu6QoW0JDfLrCeCj/view",
+    "paperFolder": "https://drive.google.com/drive/folders/1XSt07MdBHglZf0XHLXEQmD51_qjBeC8P",
+    "notes": "https://drive.google.com/file/d/1EbD38RU9glSVAZ84CeIhbPUXKMRp4Zm7/view",
+    "xlsx": "https://drive.google.com/file/d/1wVzfC2KTjXQdSrM7CHF2zWNcFLLOSLhV/view",
+    "folder": "https://drive.google.com/drive/folders/1FlfcC498A0Ektrdp1cVNbqLicdRHDQew"
+   },
    "video": false,
    "attempts": []
   },
   {
    "id": "Q19",
    "tier": 2,
-   "name": "Zhichi Co",
-   "sitting": "Dec 2021 Q1",
-   "marks": 50,
-   "topic": "Cost of capital & APV",
-   "note": "Adjusted present value",
+   "name": "Pault Co",
+   "sitting": "Dec 2016 Q4",
+   "marks": 25,
+   "topic": "Bonds, yield curve & credit spreads",
+   "note": "",
+   "why": "Bonds, yield curve and credit spreads: no 2023-2025 question on the list. Pault is the newest one (the tutor solved it live in Jun 2026).",
    "day": 11,
-   "where": "Tutor portal (Live Sep 2023) - examiner report in project",
+   "where": "Drive: Past papers and relevant material > Dec 2016 past paper and relevant material",
+   "links": {
+    "q": "https://drive.google.com/file/d/187_VoKgEtOTzVrA4IBe-ruj3XRflp9ns/view",
+    "a": "https://drive.google.com/file/d/1FDB8say1NAwaAdyko8opupS29j2ks5kg/view",
+    "paperFolder": "https://drive.google.com/drive/folders/1Km9AifthDqBqcvMYcY9bEuGutK8iJJ3c",
+    "xlsx": "https://drive.google.com/file/d/1AwbHw5GmGTp9lTuc3XvtPF80RFXiKFY5/view"
+   },
    "video": false,
    "attempts": []
   },
   {
    "id": "Q20",
-   "tier": 2,
-   "name": "Pault Co",
-   "sitting": "Dec 2016 Q4",
-   "marks": 25,
-   "topic": "Bonds, yield curve & credit spreads",
-   "note": "Spot yield curve and bond valuation",
-   "day": 11,
-   "where": "Tutor portal (solved live Jun 2026)",
+   "tier": 1,
+   "name": "Northney Co",
+   "sitting": "Dec 2024 Q1",
+   "marks": 50,
+   "topic": "FX hedging",
+   "note": "Treasury relocation, netting, currency futures, IR collar for a deposit. Also in Mock 2.",
+   "why": null,
+   "day": 12,
+   "where": "Drive: Past papers and relevant material > December 2024 past paper and relevant material",
+   "links": {
+    "q": "https://drive.google.com/file/d/13Uet8PA4tGeasfB_OCpWu5PUpGq-F8p7/view",
+    "a": "https://drive.google.com/file/d/1E71aZqYJ4Y1L9bhOmQNbN3ppqqxQzKFw/view",
+    "paperFolder": "https://drive.google.com/drive/folders/1glg5tejEQcyNOVslsy0W188r2LshpK0V",
+    "xlsx": "https://drive.google.com/file/d/1dnjX7VBWT6Rh616QaSZ373UujFYg_dZK/view"
+   },
    "video": false,
    "attempts": []
   },
   {
    "id": "Q21",
    "tier": 2,
-   "name": "Prysor Co",
-   "sitting": "Jun 2022 Q1",
-   "marks": 50,
-   "topic": "Investment appraisal (NPV / international)",
-   "note": "International investment appraisal",
+   "name": "Fitzharis Co",
+   "sitting": "Dec 2020 Q3",
+   "marks": 25,
+   "topic": "Interest rate hedging & netting",
+   "note": "",
+   "why": "Interest rate swaps: none of the 2023-2025 papers has a swap calculation, and Fitzharis is the only swap question on the list.",
    "day": 12,
-   "where": "Tutor portal (Live Mar 2023)",
+   "where": "Drive: Past papers and relevant material > Dec 2020 past paper and relevant material",
+   "links": {
+    "q": "https://drive.google.com/file/d/1RrvxbNn41XGF0DkMT9we5xI3t87sFszC/view",
+    "a": "https://drive.google.com/file/d/1mskeXaWKgXoVvuFKPOVx3A46Uodv0-FO/view",
+    "paperFolder": "https://drive.google.com/drive/folders/1eOfD38CbLQWhRtlDNXcurIFTfxk2GF4B",
+    "notes": "https://drive.google.com/file/d/1kIGE5lZGvM-s3qw2rzMK-ypsp3e9dcUo/view",
+    "xlsx": "https://drive.google.com/file/d/1ZGQg-5HRb-cu-CP-NWuxa4Wp2wGOc1Uv/view",
+    "folder": "https://drive.google.com/drive/folders/1EGm0z6jnJe9vmzxRhEm6vEvQFq69fovl"
+   },
    "video": false,
    "attempts": []
   },
   {
    "id": "Q22",
-   "tier": 2,
-   "name": "Kerrin Co & Danton Co",
-   "sitting": "Dec 2019 Q2 (check)",
-   "marks": 25,
+   "tier": 1,
+   "name": "Kampai Co",
+   "sitting": "Jun 2025 Q1",
+   "marks": 50,
    "topic": "M&A & valuation",
-   "note": "mergers and acquisitions",
-   "day": 12,
-   "where": "Tutor portal (Live Sep 2023) - tutor list shows same sitting as Cadnam; verify",
+   "note": "All-report Section A: P/E + FCF valuation, gains, financing, ethics. Also in Mock 3.",
+   "why": null,
+   "day": 13,
+   "where": "Drive: Past papers and relevant material > June 2025 past paper and relevant material",
+   "links": {
+    "q": "https://drive.google.com/file/d/1-nDU2qeq_gTI_iQYnZ6ish0EV__12eyA/view",
+    "a": "https://drive.google.com/file/d/1xOQ_38AcY60C05ha01rRrBDZuslq8kyN/view",
+    "paperFolder": "https://drive.google.com/drive/folders/17M9tdGWHYuocvS470L-WNZfjxwKyHEK3",
+    "xlsx": "https://drive.google.com/file/d/1z3KGJEoa4pclQnugMSesMtWTB8VUhkdD/view"
+   },
    "video": false,
    "attempts": []
   },
   {
    "id": "Q23",
    "tier": 2,
-   "name": "Fonder Co",
-   "sitting": "Dec 2022 Q1",
-   "marks": 50,
-   "topic": "Interest rate hedging & netting",
-   "note": "Interest rate hedging",
+   "name": "Halstock Co",
+   "sitting": "Dec 2025 Q2",
+   "marks": 25,
+   "topic": "M&A & valuation",
+   "note": "FCF valuation, synergies, % gain. Also in Mock 4.",
+   "why": null,
    "day": 13,
-   "where": "Tutor portal (Game changer, Mar 2023 webinar)",
+   "where": "Drive: Past papers and relevant material > September December 2025 past paper",
+   "links": {
+    "q": "https://drive.google.com/file/d/1UlZLuQkLcLKrlp4PR5le69TKdKEZXAzQ/view",
+    "a": "https://drive.google.com/file/d/1UimKd767R6bfTX8xV7Xd2uNeoVoA68qE/view",
+    "paperFolder": "https://drive.google.com/drive/folders/19FKtKvnf3-cM3Mpp8JvMGTNteJXMkMBq",
+    "notes": "https://drive.google.com/file/d/1F_4qePxOO6ZCqd1QEKlIp32CsTAGkGRm/view",
+    "xlsx": "https://drive.google.com/file/d/1pcHWKxu6KcBwRBlg28q4-8rNlNvurQQb/view"
+   },
    "video": false,
    "attempts": []
   },
   {
    "id": "Q24",
-   "tier": 2,
-   "name": "Fitzharis Co",
-   "sitting": "Dec 2020 Q3",
-   "marks": 25,
-   "topic": "Interest rate hedging & netting",
-   "note": "Interest rate swap",
-   "day": 13,
-   "where": "Tutor portal (Live Sep 2023)",
+   "tier": 1,
+   "name": "Drimpton Co",
+   "sitting": "Dec 2025 Q1",
+   "marks": 50,
+   "topic": "Investment appraisal (NPV / international)",
+   "note": "Overseas NPV (20 marks), assumptions, ESG. Also in Mock 4.",
+   "why": null,
+   "day": 14,
+   "where": "Drive: Past papers and relevant material > September December 2025 past paper",
+   "links": {
+    "q": "https://drive.google.com/file/d/1UlZLuQkLcLKrlp4PR5le69TKdKEZXAzQ/view",
+    "a": "https://drive.google.com/file/d/1UimKd767R6bfTX8xV7Xd2uNeoVoA68qE/view",
+    "paperFolder": "https://drive.google.com/drive/folders/19FKtKvnf3-cM3Mpp8JvMGTNteJXMkMBq",
+    "notes": "https://drive.google.com/file/d/1kOeANN1rGACif-ELscqeb7oeulhvcbA6/view",
+    "xlsx": "https://drive.google.com/file/d/1AjVuz20oWSRY0uE8qu0k112JqKyhpndR/view"
+   },
    "video": false,
    "attempts": []
   },
   {
    "id": "Q25",
    "tier": 2,
-   "name": "Louieed Co & Tidded Co",
-   "sitting": "Jun 2016 Q2",
+   "name": "Eview Co",
+   "sitting": "Dec 2017 Q2",
    "marks": 25,
-   "topic": "M&A & valuation",
-   "note": "Implied P/E ratio",
+   "topic": "Reconstruction & unbundling",
+   "note": "",
+   "why": "Second reconstruction question: it covers a financial reconstruction scheme, which Newimber and the NPP handout do not. No recent alternative on the list.",
    "day": 14,
-   "where": "Tutor portal (Game changer, Jun 2024 webinar)",
+   "where": "Drive: Past papers and relevant material > Dec 2017 past paper and relevant material",
+   "links": {
+    "q": "https://drive.google.com/file/d/1QmCfY_e-BUghGaL_ZmWwsarwjeA7DXEI/view",
+    "a": "https://drive.google.com/file/d/115iwn71UoAvzr0vKyoVG9cM0z9XVqlqQ/view",
+    "paperFolder": "https://drive.google.com/drive/folders/14zsxIp0dyS3URCqa_mjHqZOTdRuKcPcK",
+    "xlsx": "https://drive.google.com/file/d/1x_FrTsG3Y2VRIXJsx4UlyzqMgctaBGxQ/view"
+   },
    "video": false,
    "attempts": []
   },
   {
    "id": "Q26",
-   "tier": 2,
-   "name": "Staple Group",
-   "sitting": "Jun 2016 Q3",
+   "tier": 3,
+   "name": "Vogel Co",
+   "sitting": "Jun 2014 Q3",
    "marks": 25,
-   "topic": "Reconstruction & unbundling",
-   "note": "corporate restructuring",
-   "day": 14,
-   "where": "Tutor portal (Live Jun 2023)",
-   "video": false,
+   "topic": "M&A & valuation",
+   "note": "",
+   "why": null,
+   "day": null,
+   "where": "Drive: tutor's merged P4 question and answer PDFs (old exam format)",
+   "links": {
+    "q": "https://drive.google.com/file/d/1Vip8bHpcIPy0VKEhYZ9BoJhB01P1q6Q-/view",
+    "a": "https://drive.google.com/file/d/15iU-RdSBhjTmej5X5LL3DBQKy245RXj7/view",
+    "bundle": true,
+    "folder": "https://drive.google.com/drive/folders/123a0bLgHa7q4pfKVcHlSsqUVS-bwccoZ"
+   },
+   "video": true,
    "attempts": []
   },
   {
    "id": "Q27",
-   "tier": 2,
-   "name": "Arthuro Co",
-   "sitting": "Jun 2018 Q3",
-   "marks": 25,
-   "topic": "Dividend capacity & policy",
-   "note": "Dividend capacity",
-   "day": 14,
-   "where": "Tutor portal (June 2018 past paper tab)",
-   "video": false,
-   "attempts": []
-  },
-  {
-   "id": "Q28",
    "tier": 3,
    "name": "Makonis Co",
    "sitting": "Dec 2013 Q3",
    "marks": 25,
    "topic": "M&A & valuation",
-   "note": "mergers and acquisitions",
+   "note": "",
+   "why": null,
    "day": null,
-   "where": "Tutor portal / project p4 file p.168",
+   "where": "Drive: tutor's merged P4 question and answer PDFs (old exam format)",
+   "links": {
+    "q": "https://drive.google.com/file/d/1Vip8bHpcIPy0VKEhYZ9BoJhB01P1q6Q-/view",
+    "a": "https://drive.google.com/file/d/15iU-RdSBhjTmej5X5LL3DBQKy245RXj7/view",
+    "bundle": true
+   },
    "video": true,
+   "attempts": []
+  },
+  {
+   "id": "Q28",
+   "tier": 3,
+   "name": "Hathway Co",
+   "sitting": "Mar 2020 Q3",
+   "marks": 25,
+   "topic": "Investment appraisal (NPV / international)",
+   "note": "",
+   "why": null,
+   "day": null,
+   "where": "Drive: Past papers and relevant material > March 2020",
+   "links": {
+    "q": "https://drive.google.com/file/d/17XKO0SuIWBaA_R9OniP7VxmUREV6j8Nv/view",
+    "a": "https://drive.google.com/file/d/1KWW_C3r5kLXfSyMrJ-xX9DHFcfaMR0pI/view",
+    "paperFolder": "https://drive.google.com/drive/folders/1oIUej65n4DP-1jtplSVrR8j-vxaGuRQF",
+    "folder": "https://drive.google.com/drive/folders/1crRB_nFger-sxQyTIgPaVHqyJQ-0TI8C"
+   },
+   "video": false,
    "attempts": []
   },
   {
    "id": "Q29",
    "tier": 3,
-   "name": "Sigra Co",
-   "sitting": "Dec 2012 Q3",
-   "marks": 20,
-   "topic": "M&A & valuation",
-   "note": "mergers and acquisitions",
+   "name": "Proteus Co",
+   "sitting": "Dec 2011 Q4",
+   "marks": 18,
+   "topic": "Reconstruction & unbundling",
+   "note": "",
+   "why": null,
    "day": null,
-   "where": "Tutor portal / project p4 file p.142-143",
+   "where": "Drive: tutor's merged P4 question and answer PDFs (old exam format)",
+   "links": {
+    "q": "https://drive.google.com/file/d/1Vip8bHpcIPy0VKEhYZ9BoJhB01P1q6Q-/view",
+    "a": "https://drive.google.com/file/d/15iU-RdSBhjTmej5X5LL3DBQKy245RXj7/view",
+    "bundle": true
+   },
    "video": false,
    "attempts": []
   },
   {
    "id": "Q30",
    "tier": 3,
-   "name": "Westparley Co",
-   "sitting": "Mar 2020 Q1",
-   "marks": 50,
-   "topic": "M&A & valuation",
-   "note": "Mergers and acquisitions",
+   "name": "Staple Group",
+   "sitting": "Jun 2016 Q3",
+   "marks": 25,
+   "topic": "Reconstruction & unbundling",
+   "note": "",
+   "why": null,
    "day": null,
-   "where": "Tutor portal (Live Sep 2023)",
+   "where": "Drive: Past papers and relevant material > Jun 2016 past paper and relevant material",
+   "links": {
+    "q": "https://drive.google.com/file/d/1YmqF3EnEtkfssuKD5xaWX_cDIlk19WG8/view",
+    "a": "https://drive.google.com/file/d/1q46tHdx0Y3HZ0wmUTH_43iP41vDHclL5/view",
+    "paperFolder": "https://drive.google.com/drive/folders/10I6gWZhxdcbgKdS5rXxLV9RwsZC2T7Hy"
+   },
    "video": false,
    "attempts": []
   },
   {
    "id": "Q31",
    "tier": 3,
-   "name": "Parafuel Co",
-   "sitting": "Sep 2022 Q1",
-   "marks": 50,
-   "topic": "M&A & valuation",
-   "note": "Mergers and acquisitions",
+   "name": "Amberle Co",
+   "sitting": "Dec 2018 Q3",
+   "marks": 25,
+   "topic": "Cost of capital & APV",
+   "note": "First extra to add if you want a second APV question.",
+   "why": null,
    "day": null,
-   "where": "Tutor portal (Live Sep 2023)",
+   "where": "Drive: Past papers and relevant material > Dec 2018 past paper and relevant material",
+   "links": {
+    "q": "https://drive.google.com/file/d/1DIxkHYOdtvpoZkrnB7rIDjVUK4-I4XZs/view",
+    "a": "https://drive.google.com/file/d/1ZDXGTtf9Ts3BceezCep03OiRz2WMRtXx/view",
+    "paperFolder": "https://drive.google.com/drive/folders/1VMKmEu0XeoXPQNTijfFzqfgikeFCxUCX",
+    "notes": "https://drive.google.com/file/d/1f6heIkfMoYwcW3R5xhL7z3TTS-otuakQ/view",
+    "notesKind": "summary",
+    "folder": "https://drive.google.com/drive/folders/1QT9HGp3_j41gx0ceeiqObr2F5oruN_vB"
+   },
    "video": false,
    "attempts": []
   },
   {
    "id": "Q32",
    "tier": 3,
-   "name": "NPP Ltd & Sun plc (handout)",
-   "sitting": "Jun 2024 webinar",
-   "marks": null,
-   "topic": "Reconstruction & unbundling",
-   "note": "Share-for-share ratio and demerger",
+   "name": "Sigra Co",
+   "sitting": "Dec 2012 Q3",
+   "marks": 20,
+   "topic": "M&A & valuation",
+   "note": "",
+   "why": null,
    "day": null,
-   "where": "Tutor portal (Game changer, Jun 2024 webinar)",
+   "where": "Drive: tutor's merged P4 question and answer PDFs (old exam format)",
+   "links": {
+    "q": "https://drive.google.com/file/d/1Vip8bHpcIPy0VKEhYZ9BoJhB01P1q6Q-/view",
+    "a": "https://drive.google.com/file/d/15iU-RdSBhjTmej5X5LL3DBQKy245RXj7/view",
+    "bundle": true,
+    "xlsx": "https://drive.google.com/file/d/19YtrlpnZGfLidvHI6TG5H9l57hDI-_nB/view"
+   },
    "video": false,
    "attempts": []
   },
   {
    "id": "Q33",
    "tier": 3,
-   "name": "Frongoch Co",
-   "sitting": "Jun 2022 Q2",
+   "name": "Burung Co",
+   "sitting": "Jun 2014 Q2",
    "marks": 25,
-   "topic": "FX hedging",
-   "note": "Foreign currency hedging",
+   "topic": "Cost of capital & APV",
+   "note": "",
+   "why": null,
    "day": null,
-   "where": "Tutor portal (Live Mar 2023)",
+   "where": "Drive: tutor's merged P4 question and answer PDFs (old exam format)",
+   "links": {
+    "q": "https://drive.google.com/file/d/1Vip8bHpcIPy0VKEhYZ9BoJhB01P1q6Q-/view",
+    "a": "https://drive.google.com/file/d/15iU-RdSBhjTmej5X5LL3DBQKy245RXj7/view",
+    "bundle": true,
+    "notes": "https://drive.google.com/file/d/1uIH613BEnh7elA3cWvDBj1E47Ria_oRm/view",
+    "folder": "https://drive.google.com/drive/folders/1se65PXbUG396uX0pmSjG0xmwS1pSWJ1M"
+   },
    "video": false,
    "attempts": []
   },
   {
    "id": "Q34",
    "tier": 3,
-   "name": "CMC Co",
-   "sitting": "Jun 2014 Q1",
-   "marks": 50,
-   "topic": "FX hedging",
-   "note": "Foreign currency hedging (+ swap, duration)",
+   "name": "Lamri Co",
+   "sitting": "Dec 2010 Q4",
+   "marks": 20,
+   "topic": "Dividend capacity & policy",
+   "note": "",
+   "why": null,
    "day": null,
-   "where": "Tutor portal (Practice yourself - 19) / project p4 file p.175-177",
+   "where": "Drive: tutor's merged P4 question and answer PDFs (old exam format)",
+   "links": {
+    "q": "https://drive.google.com/file/d/1Vip8bHpcIPy0VKEhYZ9BoJhB01P1q6Q-/view",
+    "a": "https://drive.google.com/file/d/15iU-RdSBhjTmej5X5LL3DBQKy245RXj7/view",
+    "bundle": true
+   },
    "video": false,
    "attempts": []
   },
   {
    "id": "Q35",
    "tier": 3,
-   "name": "Adverane Co",
-   "sitting": "Jun 2018 Q4",
-   "marks": 25,
-   "topic": "FX hedging",
-   "note": "Foreign currency hedging",
+   "name": "Prysor Co",
+   "sitting": "Jun 2022 Q1",
+   "marks": 50,
+   "topic": "Investment appraisal (NPV / international)",
+   "note": "",
+   "why": null,
    "day": null,
-   "where": "Tutor portal (Important live classes)",
+   "where": "Drive: Past papers and relevant material > Jun 2022 past paper and relevant material",
+   "links": {
+    "q": "https://drive.google.com/file/d/1x8AFWY4dMnvp5IdBzxqmAc6zFf0KhcrX/view",
+    "a": "https://drive.google.com/file/d/1KNMfIxR_YU68GMw9Lxj_AizfVjcVLq3r/view",
+    "paperFolder": "https://drive.google.com/drive/folders/1OPAGWGTAzmIX60gMZNbmKb6crWkFUqrR",
+    "locked": true,
+    "folder": "https://drive.google.com/drive/folders/1heYi1fh_BBM_qqqgbcervJNzIcdZYibU"
+   },
    "video": false,
    "attempts": []
   },
   {
    "id": "Q36",
    "tier": 3,
-   "name": "Wardegul Co",
-   "sitting": "Dec 2017 Q4",
-   "marks": 25,
-   "topic": "Interest rate hedging & netting",
-   "note": "Interest rate hedging",
+   "name": "Westparley Co",
+   "sitting": "Mar 2020 Q1",
+   "marks": 50,
+   "topic": "M&A & valuation",
+   "note": "",
+   "why": null,
    "day": null,
-   "where": "Tutor portal (Live Sep 2023)",
+   "where": "Drive: Past papers and relevant material > March 2020",
+   "links": {
+    "q": "https://drive.google.com/file/d/17XKO0SuIWBaA_R9OniP7VxmUREV6j8Nv/view",
+    "a": "https://drive.google.com/file/d/1KWW_C3r5kLXfSyMrJ-xX9DHFcfaMR0pI/view",
+    "paperFolder": "https://drive.google.com/drive/folders/1oIUej65n4DP-1jtplSVrR8j-vxaGuRQF",
+    "folder": "https://drive.google.com/drive/folders/1-v06kRwb4eux-bQjXvlGUJtmed19txCV"
+   },
    "video": false,
    "attempts": []
   },
   {
    "id": "Q37",
    "tier": 3,
-   "name": "Blackbosca Co",
-   "sitting": "Jun 2023 Q3",
+   "name": "Kerrin Co & Danton Co",
+   "sitting": "Dec 2019 Q3",
    "marks": 25,
-   "topic": "Investment appraisal (NPV / international)",
-   "note": "International investment appraisal",
+   "topic": "M&A & valuation",
+   "note": "The tutor's list says Q2; the Drive folder shows it is Dec 2019 Q3.",
+   "why": null,
    "day": null,
-   "where": "Tutor portal (June 2023 past paper tab)",
+   "where": "Drive: Past papers and relevant material > Dec 2019 past paper and relevant material",
+   "links": {
+    "q": "https://drive.google.com/file/d/17i_nMlecgL09tIZxpv0HSu_DCktOeya-/view",
+    "a": "https://drive.google.com/file/d/1uOZfAZ1SjVEq1H_38JC5-omXJN5SeNFO/view",
+    "paperFolder": "https://drive.google.com/drive/folders/1sNgcNUQOYLjqAAxq9DNcI7jSJrmJP59w",
+    "notes": "https://drive.google.com/file/d/1Mk0EJBYBNcAio-x_urxYEPhJSu0RX-xJ/view",
+    "notesKind": "summary",
+    "xlsx": "https://drive.google.com/file/d/11dIUpM1nbwiTJS_Rm4nxLd83q7L8Hflh/view",
+    "folder": "https://drive.google.com/drive/folders/16G1cgiC3AoS8PX6EnmYbyxgZ1JUHPnNR"
+   },
    "video": false,
    "attempts": []
   },
   {
    "id": "Q38",
    "tier": 3,
-   "name": "Fernhurst Co",
-   "sitting": "Dec 2016 Q2",
+   "name": "Nubo Co",
+   "sitting": "Dec 2013 Q4",
    "marks": 25,
-   "topic": "Investment appraisal (NPV / international)",
-   "note": "International investment appraisal",
+   "topic": "Reconstruction & unbundling",
+   "note": "",
+   "why": null,
    "day": null,
-   "where": "Tutor portal (solved live Jun 2026)",
+   "where": "Drive: tutor's merged P4 question and answer PDFs (old exam format)",
+   "links": {
+    "q": "https://drive.google.com/file/d/1Vip8bHpcIPy0VKEhYZ9BoJhB01P1q6Q-/view",
+    "a": "https://drive.google.com/file/d/15iU-RdSBhjTmej5X5LL3DBQKy245RXj7/view",
+    "bundle": true
+   },
    "video": false,
    "attempts": []
   },
   {
    "id": "Q39",
    "tier": 3,
-   "name": "Hathway Co",
-   "sitting": "Mar 2020 Q3",
+   "name": "Tippletine Co",
+   "sitting": "Jun 2018 Q2",
    "marks": 25,
-   "topic": "Investment appraisal (NPV / international)",
-   "note": "investment appraisal",
+   "topic": "Cost of capital & APV",
+   "note": "",
+   "why": null,
    "day": null,
-   "where": "Tutor portal (Past paper bank)",
+   "where": "Drive: Past papers and relevant material > Jun 2018 past paper and relevant material",
+   "links": {
+    "q": "https://drive.google.com/file/d/1qO0gDRuj5MML2fEZ_xW_iBuJQjrQ9aGF/view",
+    "a": "https://drive.google.com/file/d/1t_mG9tPq9nIc4l9NDZ1RLHLtI5bHf6mC/view",
+    "paperFolder": "https://drive.google.com/drive/folders/1oYAYca_VprwNZM93LeH4ji47jygRoF93",
+    "notes": "https://drive.google.com/file/d/1fYiciduTFys5jaGttqUzPG4cX-EfL7GB/view",
+    "notesKind": "summary",
+    "folder": "https://drive.google.com/drive/folders/1d9fD0vv6bERBUjC-hKJ60y5CWPr5XWVV"
+   },
    "video": false,
    "attempts": []
   },
   {
    "id": "Q40",
    "tier": 3,
-   "name": "Talam Co",
-   "sitting": "Jun 2019 Q1",
-   "marks": 50,
-   "topic": "Real options / Black-Scholes",
-   "note": "Investment appraisal + BSOP",
+   "name": "Arthuro Co",
+   "sitting": "Jun 2018 Q3",
+   "marks": 25,
+   "topic": "Dividend capacity & policy",
+   "note": "",
+   "why": null,
    "day": null,
-   "where": "Tutor portal (Game changer, Mar 2023 grand revision)",
+   "where": "Drive: Past papers and relevant material > Jun 2018 past paper and relevant material",
+   "links": {
+    "q": "https://drive.google.com/file/d/1qO0gDRuj5MML2fEZ_xW_iBuJQjrQ9aGF/view",
+    "a": "https://drive.google.com/file/d/1t_mG9tPq9nIc4l9NDZ1RLHLtI5bHf6mC/view",
+    "paperFolder": "https://drive.google.com/drive/folders/1oYAYca_VprwNZM93LeH4ji47jygRoF93",
+    "notes": "https://drive.google.com/file/d/1fYiciduTFys5jaGttqUzPG4cX-EfL7GB/view",
+    "notesKind": "summary",
+    "folder": "https://drive.google.com/drive/folders/1a3pc8lQMG-8eYjNRSrYCowdpXmmLS1-F"
+   },
    "video": false,
    "attempts": []
   },
   {
    "id": "Q41",
    "tier": 3,
-   "name": "Amberle Co",
-   "sitting": "Dec 2018 Q3",
+   "name": "Chithrust Co",
+   "sitting": "Dec 2016 Q3",
    "marks": 25,
-   "topic": "Cost of capital & APV",
-   "note": "Adjusted present value",
+   "topic": "Dividend capacity & policy",
+   "note": "",
+   "why": null,
    "day": null,
-   "where": "Tutor portal (Past paper bank)",
+   "where": "Drive: Past papers and relevant material > Dec 2016 past paper and relevant material",
+   "links": {
+    "q": "https://drive.google.com/file/d/187_VoKgEtOTzVrA4IBe-ruj3XRflp9ns/view",
+    "a": "https://drive.google.com/file/d/1FDB8say1NAwaAdyko8opupS29j2ks5kg/view",
+    "paperFolder": "https://drive.google.com/drive/folders/1Km9AifthDqBqcvMYcY9bEuGutK8iJJ3c",
+    "notes": "https://drive.google.com/file/d/1K6pLbib1aqIHs5pTkjoHQbFEK0fkDflK/view"
+   },
    "video": false,
    "attempts": []
   },
   {
    "id": "Q42",
    "tier": 3,
-   "name": "Tippletine Co",
-   "sitting": "Jun 2018 Q2",
+   "name": "Fernhurst Co",
+   "sitting": "Dec 2016 Q2",
    "marks": 25,
-   "topic": "Cost of capital & APV",
-   "note": "Adjusted present value",
+   "topic": "Investment appraisal (NPV / international)",
+   "note": "",
+   "why": null,
    "day": null,
-   "where": "Tutor portal (June 2018 past paper tab)",
+   "where": "Drive: Past papers and relevant material > Dec 2016 past paper and relevant material",
+   "links": {
+    "q": "https://drive.google.com/file/d/187_VoKgEtOTzVrA4IBe-ruj3XRflp9ns/view",
+    "a": "https://drive.google.com/file/d/1FDB8say1NAwaAdyko8opupS29j2ks5kg/view",
+    "paperFolder": "https://drive.google.com/drive/folders/1Km9AifthDqBqcvMYcY9bEuGutK8iJJ3c",
+    "xlsx": "https://drive.google.com/file/d/1r9NZoiQwoaSZL1zVelC4h68QDs_ypAcN/view"
+   },
    "video": false,
    "attempts": []
   },
   {
    "id": "Q43",
    "tier": 3,
-   "name": "Levante Co",
-   "sitting": "Dec 2011 Q3",
-   "marks": 18,
-   "topic": "Bonds, yield curve & credit spreads",
-   "note": "Bond valuation",
+   "name": "Armstrong Group",
+   "sitting": "Dec 2015 Q2",
+   "marks": 25,
+   "topic": "Interest rate hedging & netting",
+   "note": "The tutor tags it FX; it is netting + an interest-rate collar.",
+   "why": null,
    "day": null,
-   "where": "Tutor portal / project p4 file p.117",
+   "where": "Drive: tutor's merged P4 question and answer PDFs (old exam format)",
+   "links": {
+    "q": "https://drive.google.com/file/d/1Vip8bHpcIPy0VKEhYZ9BoJhB01P1q6Q-/view",
+    "a": "https://drive.google.com/file/d/15iU-RdSBhjTmej5X5LL3DBQKy245RXj7/view",
+    "bundle": true
+   },
    "video": false,
    "attempts": []
   },
   {
    "id": "Q44",
    "tier": 3,
-   "name": "Proteus Co",
-   "sitting": "Dec 2011 Q4",
-   "marks": 18,
-   "topic": "Reconstruction & unbundling",
-   "note": "corporate restructuring (MBO)",
+   "name": "CMC Co",
+   "sitting": "Jun 2014 Q1",
+   "marks": 50,
+   "topic": "FX hedging",
+   "note": "",
+   "why": null,
    "day": null,
-   "where": "Tutor portal / project p4 file p.118",
+   "where": "Drive: tutor's merged P4 question and answer PDFs (old exam format)",
+   "links": {
+    "q": "https://drive.google.com/file/d/1Vip8bHpcIPy0VKEhYZ9BoJhB01P1q6Q-/view",
+    "a": "https://drive.google.com/file/d/15iU-RdSBhjTmej5X5LL3DBQKy245RXj7/view",
+    "bundle": true,
+    "folder": "https://drive.google.com/drive/folders/1YAGXB0931k9vX9fqwZ-_L-AEqT_00mCy"
+   },
    "video": false,
    "attempts": []
   },
   {
    "id": "Q45",
    "tier": 3,
-   "name": "Nubo Co",
-   "sitting": "Dec 2013 Q4",
+   "name": "Daikon Co",
+   "sitting": "Jun 2015 Q4",
    "marks": 25,
-   "topic": "Reconstruction & unbundling",
-   "note": "corporate restructuring (+ Islamic finance)",
+   "topic": "Interest rate hedging & netting",
+   "note": "Old answer uses under/over-hedge and lock-in; the 2024-2026 reports say ignore those.",
+   "why": null,
    "day": null,
-   "where": "Tutor portal / project p4 file p.169",
+   "where": "Drive: tutor's merged P4 question and answer PDFs (old exam format)",
+   "links": {
+    "q": "https://drive.google.com/file/d/1Vip8bHpcIPy0VKEhYZ9BoJhB01P1q6Q-/view",
+    "a": "https://drive.google.com/file/d/15iU-RdSBhjTmej5X5LL3DBQKy245RXj7/view",
+    "bundle": true
+   },
    "video": false,
    "attempts": []
   },
   {
    "id": "Q46",
    "tier": 3,
-   "name": "Lamri Co",
-   "sitting": "Dec 2010 Q4",
-   "marks": 20,
-   "topic": "Dividend capacity & policy",
-   "note": "Dividend capacity (+ transfer pricing)",
+   "name": "Nutourne Co",
+   "sitting": "Dec 2018 Q2",
+   "marks": 25,
+   "topic": "FX hedging",
+   "note": "",
+   "why": null,
    "day": null,
-   "where": "Tutor portal / project p4 file p.94",
+   "where": "Drive: Past papers and relevant material > Dec 2018 past paper and relevant material",
+   "links": {
+    "q": "https://drive.google.com/file/d/1DIxkHYOdtvpoZkrnB7rIDjVUK4-I4XZs/view",
+    "a": "https://drive.google.com/file/d/1ZDXGTtf9Ts3BceezCep03OiRz2WMRtXx/view",
+    "paperFolder": "https://drive.google.com/drive/folders/1VMKmEu0XeoXPQNTijfFzqfgikeFCxUCX",
+    "notes": "https://drive.google.com/file/d/1f6heIkfMoYwcW3R5xhL7z3TTS-otuakQ/view",
+    "notesKind": "summary",
+    "folder": "https://drive.google.com/drive/folders/1zfLGISxEzt3_flp-2aqsDhH1qmCF43eR"
+   },
    "video": false,
    "attempts": []
   },
   {
    "id": "Q47",
    "tier": 3,
-   "name": "Chithrust Co",
-   "sitting": "Dec 2016 Q3",
+   "name": "Adverane Co",
+   "sitting": "Jun 2018 Q4",
    "marks": 25,
-   "topic": "Dividend capacity & policy",
-   "note": "Dividend capacity",
+   "topic": "FX hedging",
+   "note": "",
+   "why": null,
    "day": null,
-   "where": "Tutor portal (solved live Jun 2026)",
+   "where": "Drive: Past papers and relevant material > Jun 2018 past paper and relevant material",
+   "links": {
+    "q": "https://drive.google.com/file/d/1qO0gDRuj5MML2fEZ_xW_iBuJQjrQ9aGF/view",
+    "a": "https://drive.google.com/file/d/1t_mG9tPq9nIc4l9NDZ1RLHLtI5bHf6mC/view",
+    "paperFolder": "https://drive.google.com/drive/folders/1oYAYca_VprwNZM93LeH4ji47jygRoF93",
+    "notes": "https://drive.google.com/file/d/1fYiciduTFys5jaGttqUzPG4cX-EfL7GB/view",
+    "notesKind": "summary",
+    "folder": "https://drive.google.com/drive/folders/1DWZhy7oIQkRQ2dmFgHtWJ-Q5oyXcLtkp"
+   },
    "video": false,
    "attempts": []
   },
   {
    "id": "Q48",
    "tier": 3,
-   "name": "Arbore Co",
-   "sitting": "Dec 2012 Q4",
+   "name": "Digunder",
+   "sitting": "Dec 2007 Q3",
    "marks": 20,
-   "topic": "Capital rationing",
-   "note": "Capital rationing",
+   "topic": "Real options / Black-Scholes",
+   "note": "",
+   "why": null,
    "day": null,
-   "where": "Tutor portal / project p4 file p.144-145",
+   "where": "Drive: tutor's merged P4 question and answer PDFs (old exam format)",
+   "links": {
+    "q": "https://drive.google.com/file/d/1Vip8bHpcIPy0VKEhYZ9BoJhB01P1q6Q-/view",
+    "a": "https://drive.google.com/file/d/15iU-RdSBhjTmej5X5LL3DBQKy245RXj7/view",
+    "bundle": true
+   },
    "video": false,
    "attempts": []
   },
   {
    "id": "Q49",
-   "tier": "Mock",
-   "name": "Mahoney Co",
-   "sitting": "Jun 2024 Q1",
-   "marks": 50,
-   "topic": "FX hedging",
-   "note": "Hedging + currency swap",
-   "day": 15,
-   "where": "Mock 1 (Mar/Jun 2024 paper)",
+   "tier": 3,
+   "name": "Colvin Co",
+   "sitting": "Dec 2020 Q2",
+   "marks": 25,
+   "topic": "Investment appraisal (NPV / international)",
+   "note": "3 marked scripts in the project (Mind of the Marker Q2).",
+   "why": null,
+   "day": null,
+   "where": "Drive: Past papers and relevant material > Dec 2020 past paper and relevant material",
+   "links": {
+    "q": "https://drive.google.com/file/d/1RrvxbNn41XGF0DkMT9we5xI3t87sFszC/view",
+    "a": "https://drive.google.com/file/d/1mskeXaWKgXoVvuFKPOVx3A46Uodv0-FO/view",
+    "paperFolder": "https://drive.google.com/drive/folders/1eOfD38CbLQWhRtlDNXcurIFTfxk2GF4B",
+    "notes": "https://drive.google.com/file/d/1kkNPxogY-GpInRgxxjlgFGzJtxxVPDJm/view",
+    "xlsx": "https://drive.google.com/file/d/1gaiz4uS7MCfS4vIbqEsMJimpX1W6op1s/view",
+    "folder": "https://drive.google.com/drive/folders/1tnNXb9TtfWRNZXMMQ10YNvbQ9xxt5O8B"
+   },
    "video": false,
    "attempts": []
   },
   {
    "id": "Q50",
-   "tier": "Mock",
-   "name": "Littlebredy Co",
-   "sitting": "Jun 2024 Q2",
+   "tier": 3,
+   "name": "Wardegul Co",
+   "sitting": "Dec 2017 Q4",
    "marks": 25,
-   "topic": "Real options / Black-Scholes",
-   "note": "Investment appraisal + BSOP calculator",
-   "day": 15,
-   "where": "Mock 1 (Mar/Jun 2024 paper)",
+   "topic": "Interest rate hedging & netting",
+   "note": "",
+   "why": null,
+   "day": null,
+   "where": "Drive: Past papers and relevant material > Dec 2017 past paper and relevant material",
+   "links": {
+    "q": "https://drive.google.com/file/d/1QmCfY_e-BUghGaL_ZmWwsarwjeA7DXEI/view",
+    "a": "https://drive.google.com/file/d/115iwn71UoAvzr0vKyoVG9cM0z9XVqlqQ/view",
+    "paperFolder": "https://drive.google.com/drive/folders/14zsxIp0dyS3URCqa_mjHqZOTdRuKcPcK",
+    "xlsx": "https://drive.google.com/file/d/1kkcONTIfg0kOj7KCYCzYEph3katobMXq/view"
+   },
    "video": false,
    "attempts": []
   },
   {
    "id": "Q51",
-   "tier": "Mock",
-   "name": "Garnod Co",
-   "sitting": "Jun 2024 Q3",
-   "marks": 25,
-   "topic": "M&A & valuation",
-   "note": "Mergers and acquisitions",
-   "day": 15,
-   "where": "Mock 1 (Mar/Jun 2024 paper)",
+   "tier": 3,
+   "name": "Levante Co",
+   "sitting": "Dec 2011 Q3",
+   "marks": 18,
+   "topic": "Bonds, yield curve & credit spreads",
+   "note": "",
+   "why": null,
+   "day": null,
+   "where": "Drive: tutor's merged P4 question and answer PDFs (old exam format)",
+   "links": {
+    "q": "https://drive.google.com/file/d/1Vip8bHpcIPy0VKEhYZ9BoJhB01P1q6Q-/view",
+    "a": "https://drive.google.com/file/d/15iU-RdSBhjTmej5X5LL3DBQKy245RXj7/view",
+    "bundle": true
+   },
    "video": false,
    "attempts": []
   },
   {
    "id": "Q52",
-   "tier": "Mock",
-   "name": "Zulla Co",
-   "sitting": "Dec 2024 Q3",
+   "tier": 3,
+   "name": "Arbore Co",
+   "sitting": "Dec 2012 Q4",
+   "marks": 20,
+   "topic": "Capital rationing",
+   "note": "Capital rationing has not appeared in the last 8 sittings.",
+   "why": null,
+   "day": null,
+   "where": "Drive: tutor's merged P4 question and answer PDFs (old exam format)",
+   "links": {
+    "q": "https://drive.google.com/file/d/1Vip8bHpcIPy0VKEhYZ9BoJhB01P1q6Q-/view",
+    "a": "https://drive.google.com/file/d/15iU-RdSBhjTmej5X5LL3DBQKy245RXj7/view",
+    "bundle": true
+   },
+   "video": false,
+   "attempts": []
+  },
+  {
+   "id": "Q53",
+   "tier": 3,
+   "name": "Parafuel Co",
+   "sitting": "Sep 2022 Q1",
+   "marks": 50,
+   "topic": "M&A & valuation",
+   "note": "",
+   "why": null,
+   "day": null,
+   "where": "Drive: Past papers and relevant material > September 2022",
+   "links": {
+    "q": "https://drive.google.com/file/d/1uxCWePIiWJgyaBhMR6sTVG3ESzuJJml8/view",
+    "a": "https://drive.google.com/file/d/1GpmcBv4W__0d2isYJLkHkGZ8MEkVjvDp/view",
+    "paperFolder": "https://drive.google.com/drive/folders/16f3zNbXmXWFaJe9Q989PKD2kpKRuRuPj"
+   },
+   "video": false,
+   "attempts": []
+  },
+  {
+   "id": "Q54",
+   "tier": 3,
+   "name": "Lough Co",
+   "sitting": "Sep 2022 Q2",
+   "marks": 25,
+   "topic": "FX hedging",
+   "note": "",
+   "why": null,
+   "day": null,
+   "where": "Drive: Past papers and relevant material > September 2022",
+   "links": {
+    "q": "https://drive.google.com/file/d/1uxCWePIiWJgyaBhMR6sTVG3ESzuJJml8/view",
+    "a": "https://drive.google.com/file/d/1GpmcBv4W__0d2isYJLkHkGZ8MEkVjvDp/view",
+    "paperFolder": "https://drive.google.com/drive/folders/16f3zNbXmXWFaJe9Q989PKD2kpKRuRuPj"
+   },
+   "video": false,
+   "attempts": []
+  },
+  {
+   "id": "Q55",
+   "tier": 3,
+   "name": "Fonder Co",
+   "sitting": "Dec 2022 Q1",
+   "marks": 50,
+   "topic": "Interest rate hedging & netting",
+   "note": "",
+   "why": null,
+   "day": null,
+   "where": "Drive: Past papers and relevant material > Dec 2022 past paper and relevant material",
+   "links": {
+    "q": "https://drive.google.com/file/d/1VWWfwWwUvNW-d5mfFdpPtuGgSusxxUfo/view",
+    "a": "https://drive.google.com/file/d/1WzFyazR7MTTUGBJuObEIIb890TVVXgYw/view",
+    "paperFolder": "https://drive.google.com/drive/folders/1nqk4zxOyjraiNYALCt9Sw9-kT9n02oLc",
+    "locked": true
+   },
+   "video": false,
+   "attempts": []
+  },
+  {
+   "id": "Q56",
+   "tier": 3,
+   "name": "Brandon Co",
+   "sitting": "Dec 2021 Q2",
+   "marks": 25,
+   "topic": "Interest rate hedging & netting",
+   "note": "Examiner report in the project.",
+   "why": null,
+   "day": null,
+   "where": "Drive: Past papers and relevant material > Dec 2021 past paper and relevant material",
+   "links": {
+    "q": "https://drive.google.com/file/d/1Jn-R-bTb06JQZ56pm_Vaf0pbvCwY7luq/view",
+    "a": "https://drive.google.com/file/d/1gx7dcLKWNeelL2buWu6QoW0JDfLrCeCj/view",
+    "paperFolder": "https://drive.google.com/drive/folders/1XSt07MdBHglZf0XHLXEQmD51_qjBeC8P",
+    "notes": "https://drive.google.com/file/d/1RZETJohocI47JxCx7wKcHHMyPldX5k2N/view",
+    "xlsx": "https://drive.google.com/file/d/1d1r-ej_sdJc6Un5Fxk3U7XWA4bFlpJ-n/view",
+    "folder": "https://drive.google.com/drive/folders/14PrPWyhQwo1Ux9DFakX1kAJBEhPRs6O0"
+   },
+   "video": false,
+   "attempts": []
+  },
+  {
+   "id": "Q57",
+   "tier": 3,
+   "name": "Frongoch Co",
+   "sitting": "Jun 2022 Q2",
+   "marks": 25,
+   "topic": "FX hedging",
+   "note": "",
+   "why": null,
+   "day": null,
+   "where": "Drive: Past papers and relevant material > Jun 2022 past paper and relevant material",
+   "links": {
+    "q": "https://drive.google.com/file/d/1x8AFWY4dMnvp5IdBzxqmAc6zFf0KhcrX/view",
+    "a": "https://drive.google.com/file/d/1KNMfIxR_YU68GMw9Lxj_AizfVjcVLq3r/view",
+    "paperFolder": "https://drive.google.com/drive/folders/1OPAGWGTAzmIX60gMZNbmKb6crWkFUqrR",
+    "locked": true,
+    "folder": "https://drive.google.com/drive/folders/1PaRTQScY5DbDKgA7rHFMA6OIH23XDr3w"
+   },
+   "video": false,
+   "attempts": []
+  },
+  {
+   "id": "Q58",
+   "tier": 3,
+   "name": "Louieed Co & Tidded Co",
+   "sitting": "Jun 2016 Q2",
    "marks": 25,
    "topic": "M&A & valuation",
-   "note": "Dividend valuation method",
-   "day": 16,
-   "where": "Mock 2 (Sep/Dec 2024 paper)",
+   "note": "",
+   "why": null,
+   "day": null,
+   "where": "Drive: Past papers and relevant material > Jun 2016 past paper and relevant material",
+   "links": {
+    "q": "https://drive.google.com/file/d/1YmqF3EnEtkfssuKD5xaWX_cDIlk19WG8/view",
+    "a": "https://drive.google.com/file/d/1q46tHdx0Y3HZ0wmUTH_43iP41vDHclL5/view",
+    "paperFolder": "https://drive.google.com/drive/folders/10I6gWZhxdcbgKdS5rXxLV9RwsZC2T7Hy"
+   },
+   "video": false,
+   "attempts": []
+  },
+  {
+   "id": "Q59",
+   "tier": 3,
+   "name": "Talam Co",
+   "sitting": "Jun 2019 Q1",
+   "marks": 50,
+   "topic": "Real options / Black-Scholes",
+   "note": "",
+   "why": null,
+   "day": null,
+   "where": "Drive: Past papers and relevant material > Jun 2019 past paper and relevant material",
+   "links": {
+    "q": "https://drive.google.com/file/d/16D5eDFDzs27NFe_8cSn9Cwarqaa427ml/view",
+    "a": "https://drive.google.com/file/d/1fmV2lXDu7NBi01iIR5RDdXIX0Gy7DxKS/view",
+    "paperFolder": "https://drive.google.com/drive/folders/1tNvTuOETglEzEFuPP1pWf5wCcu2oMo7j",
+    "notes": "https://drive.google.com/file/d/1skXUWUc6w_dsgvbO2AwRKrNB8s9TYYDT/view",
+    "notesKind": "summary",
+    "folder": "https://drive.google.com/drive/folders/1F0i2ssRiKO7F_xS5462Q9aykhgMHetGF"
+   },
    "video": false,
    "attempts": []
   }
@@ -6154,12 +6707,40 @@ window.AFM_DATA = {
   }
  ],
  "skills": [
-  {"date": "2026-11-20", "source": "Oxwick Co", "communication": null, "analysis": 2, "scepticism": 3, "commercial": 2}
+  {
+   "date": "2026-11-20",
+   "source": "Oxwick Co",
+   "communication": null,
+   "analysis": 2,
+   "scepticism": 3,
+   "commercial": 2
+  }
  ],
  "errors": [
-  {"date": "2026-11-20", "question": "Oxwick Co", "topic": "M&A & valuation", "mistake": "FCF row =SUM(C27:C29) included the year-number row, so every year's FCF was overstated by 1-4", "rule": "Sum only the cash flow rows; re-check each total against its inputs before discounting", "lost": 0.5},
-  {"date": "2026-11-20", "question": "Oxwick Co", "topic": "M&A & valuation", "mistake": "Calculated % gain (20.25%) but never wrote the conclusion against the 15% requirement", "rule": "Requirement said 'concluding whether': always write one line - gain X% vs target Y%, so accept/reject", "lost": 1},
-  {"date": "2026-11-20", "question": "Oxwick Co", "topic": "M&A & valuation", "mistake": "Said the DIRECTORS can diversify more cheaply; it is the SHAREHOLDERS who can diversify their own portfolios more easily than the company can", "rule": "Name the right party: shareholders' portfolio diversification vs company diversification", "lost": 0.5}
+  {
+   "date": "2026-11-20",
+   "question": "Oxwick Co",
+   "topic": "M&A & valuation",
+   "mistake": "FCF row =SUM(C27:C29) included the year-number row, so every year's FCF was overstated by 1-4",
+   "rule": "Sum only the cash flow rows; re-check each total against its inputs before discounting",
+   "lost": 0.5
+  },
+  {
+   "date": "2026-11-20",
+   "question": "Oxwick Co",
+   "topic": "M&A & valuation",
+   "mistake": "Calculated % gain (20.25%) but never wrote the conclusion against the 15% requirement",
+   "rule": "Requirement said 'concluding whether': always write one line - gain X% vs target Y%, so accept/reject",
+   "lost": 1
+  },
+  {
+   "date": "2026-11-20",
+   "question": "Oxwick Co",
+   "topic": "M&A & valuation",
+   "mistake": "Said the DIRECTORS can diversify more cheaply; it is the SHAREHOLDERS who can diversify their own portfolios more easily than the company can",
+   "rule": "Name the right party: shareholders' portfolio diversification vs company diversification",
+   "lost": 0.5
+  }
  ],
  "journal": []
 };
@@ -6298,7 +6879,7 @@ $("#updated").textContent = "Last updated " + fmt(parse(D.meta.updated));
   const t = sv("text",{x:66,y:72,"text-anchor":"middle","font-size":26,"font-weight":600,"font-family":"Geist",fill:"#111110"}); t.textContent = `${attempted.length}/${core.length}`; s.appendChild(t);
   const by = t => D.questions.filter(q=>q.tier===t);
   const done = arr => arr.filter(q=>best(q)!=null).length;
-  $("#tierBreak").innerHTML = [["Must do",by(1)],["Should do",by(2)],["Stretch",by(3)],["In mocks",by("Mock")]]
+  $("#tierBreak").innerHTML = [["Must do",by(1)],["Should do",by(2)],["Stretch",by(3)]]
     .map(([k,a])=>`<div><span>${k}</span><b>${done(a)}/${a.length}</b></div>`).join("");
 })();
 
@@ -6334,6 +6915,20 @@ $("#updated").textContent = "Last updated " + fmt(parse(D.meta.updated));
   const qs = D.questions.filter(q => q.day===d.day && q.tier!=="Mock");
   $("#nextChips").innerHTML = qs.map(q=>`<span class="qchip">${esc(q.name)}</span>`).join("");
 })();
+
+/* ---------- PDF buttons: question paper, ACCA answer, tutor notes, tutor workings (open in a new tab) ---------- */
+const qNo = q => { const m = String(q.sitting||"").match(/Q(\d)/); return m ? "Q"+m[1] : ""; };
+function linkBtns(q, compact){
+  const L = q.links || {}, out = [];
+  const a = (url, icon, label, extra, cls) => `<a class="qlink ${cls||""}" href="${esc(url)}" target="_blank" rel="noopener" title="${esc(label)}${extra?" ("+esc(extra)+")":""}"><i class="ph ${icon}"></i>${esc(label)}${extra&&!compact?` <small>${esc(extra)}</small>`:""}</a>`;
+  if (L.q) out.push(a(L.q, "ph-file-text", "Question", L.bundle ? "P4 bundle, find "+q.sitting : (qNo(q) ? qNo(q)+" in paper" : ""), "primary"));
+  if (L.a) out.push(a(L.a, "ph-seal-check", "Model answer", L.bundle ? "P4 bundle" : ""));
+  if (L.notes) out.push(a(L.notes, "ph-notebook", L.notesKind==="summary" ? "Tutor summary" : "Tutor notes", L.notesKind==="summary" ? "whole paper" : ""));
+  if (L.xlsx) out.push(a(L.xlsx, "ph-table", "Workings", "xlsx"));
+  if (L.folder) out.push(a(L.folder, "ph-folder-open", "Tutor folder", ""));
+  if (!out.length) return `<span class="qlinks-empty">${q.sitting.includes("handout") ? "Open it from the tutor portal (June 2024 webinar)." : "No files found in the Drive for this one."}</span>`;
+  return `<div class="qlinks">${out.join("")}</div>` + (L.locked ? `<div class="qhint"><i class="ph ph-lock-key"></i>These PDFs are password-protected; the password note is in the same Drive folder.</div>` : "");
+}
 
 /* ---------- plan: vertical one-screen timeline ---------- */
 let selectDay = () => {};
@@ -6389,7 +6984,11 @@ let selectDay = () => {};
       qList = /^ACCA/.test(m.paper)
         ? ml.qs.map((x,i)=>qRow(x, `${ml.yr} Q${i+1}`, i===0?"50 marks, 90 min":"25 marks, 45 min")).join("") + `<div class="dt-target">Target ${Math.round(m.target*100)}% in 3h15</div>`
         : qRow(m.paper, m.questions, "100 marks, 3h15") + `<div class="dt-target">Target ${Math.round(m.target*100)}%</div>`; }
-    else qList = qs.map(q => { const b=best(q); return qRow(q.name, sitFull(q.sitting), b!=null?Math.round(b*100)+"%":(q.marks||25)+" marks, "+Math.round((q.marks||25)*1.8)+" min", q.id); }).join("");
+    else qList = qs.map(q => { const b=best(q);
+      const right = b!=null ? Math.round(b*100)+"%" : q.marks ? q.marks+" marks, "+Math.round(q.marks*1.8)+" min" : "handout";
+      return `<div class="dt-qc"><button class="dt-qtop" data-q="${q.id}"><span class="dt-qn"><b>${esc(q.name)}</b><small>${esc(sitFull(q.sitting))}</small></span><span class="dt-right">${right}</span></button>
+        ${q.why?`<div class="dt-why"><i class="ph ph-clock-counter-clockwise"></i><span>${esc(q.why)}</span></div>`:""}
+        ${linkBtns(q, true)}</div>`; }).join("");
     p.innerHTML = `<div class="dt-top"><div class="dt-num">${String(d.day).padStart(2,"0")}</div>${tag}</div>
       <div class="dt-meta">${esc(dateOf(d.day).toLocaleDateString("en-GB",{weekday:"long",day:"numeric",month:"long"}))}, ${d.hours} hours</div>
       <div class="dt-seg">${Array.from({length:8},(_,i)=>`<i class="${i<d.hours?"on":""}"></i>`).join("")}</div>
@@ -6416,7 +7015,7 @@ let selectDay = () => {};
     if (e.key===" "||e.key==="Enter"){ if(!e.target.closest(".pd-ck")){ e.preventDefault(); toggle(sel);} } });
   $("#pdetail").addEventListener("click", e => { const t=e.target.closest(".dt-done"); if (t){ toggle(+t.dataset.t); return; }
     const s=e.target.closest("[data-step]"); if (s){ selectDay(sel + +s.dataset.step); return; }
-    const q=e.target.closest(".dt-q[data-q]"); if (q) openQ(q.dataset.q); });
+    const q=e.target.closest("[data-q]"); if (q) openQ(q.dataset.q); });
   selectDay(dayIdx);
   $("#todayBtn").addEventListener("click", () => selectDay(dayIdx));
 })();
@@ -6452,7 +7051,7 @@ function statusOf(q){ const b=best(q); if (q.tier==="Mock" && b==null) return ["
 function renderLib(animate){
   const lib = $("#lib");
   const state = (animate && window.Flip) ? Flip.getState(".tile") : null;
-  const list = D.questions.filter(q => (fTier==="all" || (fTier==="core" ? (q.tier===1||q.tier===2) : String(q.tier)===fTier)) && (!fTopic || q.topic===fTopic));
+  const list = D.questions.filter(q => (fTier==="all" || (fTier==="core" ? (q.tier===1||q.tier===2) : fTier==="old" ? !!q.why : String(q.tier)===fTier)) && (!fTopic || q.topic===fTopic));
   if (!list.length){ lib.innerHTML = `<div class="empty" style="grid-column:1/-1"><b>No questions match.</b><br>Clear the topic filter to see the rest.</div>`; return; }
   lib.innerHTML = list.map(q => { const [s,c]=statusOf(q); const b=best(q);
     const tierCol = q.tier===1 ? "var(--accent)" : q.tier===2 ? "var(--ink)" : q.tier===3 ? "var(--line-2)" : "transparent";
@@ -6467,6 +7066,7 @@ function renderLib(animate){
 document.querySelectorAll(".fbtn").forEach(b => b.addEventListener("click", () => {
   document.querySelectorAll(".fbtn").forEach(x=>x.classList.toggle("on", x===b)); fTier=b.dataset.f; renderLib(true); }));
 sel.addEventListener("change", () => { fTopic = sel.value; renderLib(true); });
+$("#fCore").textContent = `Core ${core.length}`; $("#fAll").textContent = `All ${D.questions.length}`;
 renderLib(false);
 
 /* drawer */
@@ -6475,6 +7075,8 @@ function openQ(id){
   const q = D.questions.find(x=>x.id===id); if(!q) return; const [s,c]=statusOf(q);
   const tierName = {1:"Must do",2:"Should do",3:"Stretch",Mock:"Met inside a mock"}[q.tier];
   $("#dbody").innerHTML = `<span class="st ${c}">${s}</span><h4>${esc(q.name)}</h4>
+    <div class="dlinks"><h5>Open in a new tab</h5>${linkBtns(q, false)}</div>
+    ${q.why?`<div class="why"><i class="ph ph-clock-counter-clockwise"></i><span><b>Why this older question:</b> ${esc(q.why)}</span></div>`:""}
     <dl class="kv"><dt>Sitting</dt><dd>${esc(q.sitting)}</dd><dt>Marks</dt><dd>${q.marks??"-"}</dd><dt>Topic</dt><dd>${esc(q.topic)}</dd>
     <dt>Tier</dt><dd>${tierName}</dd><dt>Planned</dt><dd>${q.day?`Day ${q.day}, ${esc(fmt(dateOf(q.day)))}`:"Only if ahead of plan"}</dd>
     <dt>Where</dt><dd>${esc(q.where)}</dd>${q.note?`<dt>Note</dt><dd>${esc(q.note)}</dd>`:""}</dl>
