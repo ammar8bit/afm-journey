@@ -1,0 +1,14 @@
+# Build output (CI rebuilds it on every push)
+dist/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+
+# Editors and OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
