@@ -321,7 +321,7 @@ window.AFM_DATA = {
      "date": "2026-11-22",
      "marks": 20.5,
      "by": "Claude",
-     "notes": "First attempt (no Passmore solution seen). (a) 11.5/12, (b) 5.5/8, prof 3.5/5. All hedge figures correct; lost marks on the missing set-up line again, undeveloped treasury points (no tax), and scepticism."
+     "notes": "First attempt (no Passmore solution seen). (a) 11.5/12, (b) 5.5/8, prof 3.5/5. All hedge figures correct; lost marks on the missing set-up line again, undeveloped treasury points (no tax), and scepticism. Gemini second opinion (afm-examiner skill): also 20.5/25."
     }
    ]
   },
@@ -1629,8 +1629,8 @@ window.AFM_DATA = {
    "date": "2026-11-22",
    "question": "Passmore Co",
    "topic": "FX hedging",
-   "mistake": "Stated the linear-basis and exercise assumptions without challenging them",
-   "rule": "After the futures and options numbers, add one sentence challenging linear basis decline and margin cash calls",
+   "mistake": "Called the Sept-June futures spread 'basis', hedged the R2m leftover at 70.80 (wrong side), and then thought the futures receipt should only count the R200m covered by 40 contracts ($2,822,236)",
+   "rule": "Basis = spot - futures; lock-in = futures + unexpired basis. Expected receipt = FULL amount / lock-in rate (R202m / 70.8658 = $2,850,458): the leftover still arrives and is sold at spot, so it is immaterial. Contract size only counts contracts. Exceptions: forecast closing rates given = spot conversion + futures gain/loss; told to hedge the leftover = forward at the correct side",
    "lost": 1
   },
   {
