@@ -4,7 +4,7 @@ window.AFM_DATA = {
   "candidate": "AFM candidate",
   "start": "2026-11-19",
   "exam": "2026-12-11",
-  "updated": "2026-11-20",
+  "updated": "2026-11-22",
   "planRule": "Recent papers (2023+) from the tutor's top-51 list; older only with a stated reason; Jun 2026 paper kept unseen for Mock 6."
  },
  "topicFrequency": {
@@ -316,7 +316,14 @@ window.AFM_DATA = {
     "paperFolder": "https://drive.google.com/drive/folders/19FKtKvnf3-cM3Mpp8JvMGTNteJXMkMBq"
    },
    "video": false,
-   "attempts": []
+   "attempts": [
+    {
+     "date": "2026-11-22",
+     "marks": 20.5,
+     "by": "Claude",
+     "notes": "First attempt (no Passmore solution seen). (a) 11.5/12, (b) 5.5/8, prof 3.5/5. All hedge figures correct; lost marks on the missing set-up line again, undeveloped treasury points (no tax), and scepticism."
+    }
+   ]
   },
   {
    "id": "Q05",
@@ -1535,6 +1542,14 @@ window.AFM_DATA = {
    "analysis": 2,
    "scepticism": 2,
    "commercial": 1
+  },
+  {
+   "date": "2026-11-22",
+   "source": "Passmore Co",
+   "communication": null,
+   "analysis": 3,
+   "scepticism": 1,
+   "commercial": 2
   }
  ],
  "errors": [
@@ -1593,6 +1608,38 @@ window.AFM_DATA = {
    "mistake": "Defined economic risk as long-term transaction risk caused by recession and drifted into financial-statement effects (translation risk); missed diversifying customers, suppliers and operations and the home-market competitor effect",
    "rule": "Economic risk = exchange rate movements changing the present value of future cash flows and competitiveness. Treasury role: identify affected cash flows, assess long-term rate drivers, match foreign assets with foreign loans, advise on diversification and pricing",
    "lost": 2
+  },
+  {
+   "date": "2026-11-22",
+   "question": "Passmore Co",
+   "topic": "FX hedging",
+   "mistake": "No set-up line again: never wrote 'Sell 40 R September futures' or 'Buy 40 R September puts at 70.80' (second paper running)",
+   "rule": "Type the set-up line before any number: buy/sell, contract month, number of contracts, price",
+   "lost": 1.5
+  },
+  {
+   "date": "2026-11-22",
+   "question": "Passmore Co",
+   "topic": "FX hedging",
+   "mistake": "Treasury points were one-liners, the hedging point was repeated, and tax planning (transfer pricing, inter-company loans, dividend timing) was missed",
+   "rule": "Each point: what treasury does, how it saves cost or earns income, why it matters for this group's overseas subsidiaries. Always check tax when there are foreign subsidiaries",
+   "lost": 2.5
+  },
+  {
+   "date": "2026-11-22",
+   "question": "Passmore Co",
+   "topic": "FX hedging",
+   "mistake": "Stated the linear-basis and exercise assumptions without challenging them",
+   "rule": "After the futures and options numbers, add one sentence challenging linear basis decline and margin cash calls",
+   "lost": 1
+  },
+  {
+   "date": "2026-11-22",
+   "question": "Passmore Co",
+   "topic": "FX hedging",
+   "mistake": "Called the Sept-June futures spread 'basis' and hedged the R2m leftover at 70.80 (wrong side) when it is immaterial",
+   "rule": "Basis = spot - futures. Lock-in = futures + unexpired basis. Ignore the fraction of a contract unless told otherwise",
+   "lost": 0
   }
  ],
  "journal": []
